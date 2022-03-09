@@ -17,7 +17,6 @@ namespace App1.Views
         public MainPage()
         {
             InitializeComponent();
-            NotificationsIcon.Source = ImageSource.FromResource("App1.Icons.NotificationsIcon.png");
         }
     }
 }

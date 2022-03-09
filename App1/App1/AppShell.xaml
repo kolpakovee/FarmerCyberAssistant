@@ -26,16 +26,16 @@
     </ShellItem>
 
     <TabBar Route="main">
-        <Tab Title="Главная" Icon="MainIcon.png" >
+        <Tab Title="Главная" Icon="Main.png" >
             <ShellContent ContentTemplate="{DataTemplate local:MainPage}"/>
         </Tab>
-        <Tab Title="Погода" Icon="MainIcon.png" >
+        <Tab Title="Погода" Icon="Clouds.png" >
             <ShellContent ContentTemplate="{DataTemplate local:WeatherPage}"/>
         </Tab>
-        <Tab Title="Поля" Icon="MainIcon.png" >
+        <Tab Title="Поля" Icon="Fields.png" >
             <ShellContent ContentTemplate="{DataTemplate local:FieldsPage}"/>
         </Tab>
-        <Tab Title="Настройки" Icon="MainIcon.png" >
+        <Tab Title="Настройки" Icon="Settings.png" >
             <ShellContent ContentTemplate="{DataTemplate local:SettingsPage}"/>
         </Tab>
     </TabBar>

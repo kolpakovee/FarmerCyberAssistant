@@ -11,110 +11,69 @@
 
     <ContentPage.Content>
         <ScrollView x:Name="scrollview">
-            <StackLayout>
-                <Grid HeightRequest="251">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.068*"/>
-                        <ColumnDefinition Width="0.77*"/>
-                        <ColumnDefinition Width="0.094*"/>
-                        <ColumnDefinition Width="0.068*"/>
-                    </Grid.ColumnDefinitions>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                
+                <Label Text="Главная" 
+                   Grid.Row="0"
+                   FontSize="34" 
+                   HorizontalOptions="Center"
+                   Margin="0,37"
+                   FontAttributes="Bold"
+                   TextColor="Black"/>
 
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="0.147*"/>
-                        <RowDefinition Height="0.18*"/>
-                        <RowDefinition Height="0.124*"/>
-                        <RowDefinition Height="0.235*"/>
-                        <RowDefinition Height="0.112*"/>
-                        <RowDefinition Height="0.235*"/>
-                    </Grid.RowDefinitions>
+                <ImageButton Source="Notification.png" 
+                     Grid.Row="0"
+                     WidthRequest="38" 
+                     VerticalOptions="Start"
+                     Margin="0,37,20,0"       
+                     HeightRequest="38" 
+                     BorderColor="White"
+                     HorizontalOptions="End"
+                     BackgroundColor="White"/>
+
+                <Frame BorderColor="#686464"
+                       Margin="20,0"
+                       Grid.Row="1"
+                       Padding="5"
+                       HasShadow="True"
+                       CornerRadius="25">
                     
-                    <Label Text="Главная" Grid.Column="0" FontSize="34"
-                       Grid.ColumnSpan="4" HorizontalTextAlignment="Center"
-                       Grid.Row="1" TextColor="Black" 
-                       FontAttributes="Bold" />
-                    
-                    <ImageButton x:Name="NotificationsIcon" 
-                           Grid.Row="1" Grid.Column="2"
-                           Source="NotificationsIcon.png" 
-                           VerticalOptions="Start"
-                           BackgroundColor="White"
-                           HeightRequest="30"
-                           WidthRequest="30"/>
-                    
-                    <Picker x:Name="picker_fields"
-                            BackgroundColor="#F7F7F7" TextColor="Black" 
-                            Grid.Row="3" Grid.Column="1"
-                            Grid.ColumnSpan="2"
+                    <Picker TextColor="Black" 
                             FontSize="17"
-                            TitleColor="#C4C4C4"
+                            Opacity="0.7"
                             HorizontalTextAlignment="Center"
+                            HorizontalOptions="CenterAndExpand"
+                            TitleColor="#C4C4C4"
                             Title="Выберите поле"/>
-                    
-                    <Picker x:Name="picker_cultures" 
-                            BackgroundColor="#F7F7F7" TextColor="Black" 
-                            TitleColor="#C4C4C4"
-                            Grid.Row="5" Grid.Column="1"
-                            Grid.ColumnSpan="2"
-                            FontSize="17"
-                            HorizontalTextAlignment="Center"
-                            Title="Выберите культуру"/>
-                </Grid>
+                </Frame>
 
-                <CollectionView x:Name="fileds"
-                    ItemsSource="{Binding Fields}"
-                    SelectionMode="None">
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <Grid RowSpacing ="20">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="0.048*"/>
-                                    <ColumnDefinition Width="0.301*"/>
-                                    <ColumnDefinition Width="0.301*"/>
-                                    <ColumnDefinition Width="0.301*"/>
-                                    <ColumnDefinition Width="0.048*"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="auto"/>
-                                    <RowDefinition Height="auto"/>
-                                </Grid.RowDefinitions>
-
-                                <StackLayout BackgroundColor="#E6D7FE" Grid.Column="1" Grid.ColumnSpan="3">
-                                    <Label Text="{Binding Name}"
-                                       Margin="5,0,0,5"
-                                       LineBreakMode="NoWrap"                    
-                                       TextColor="Black"
-                                       FontSize="17"
-                                       FontAttributes="Bold"/>
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="1*"/>
-                                            <ColumnDefinition Width="1*"/>
-                                            <ColumnDefinition Width="1*"/>
-                                        </Grid.ColumnDefinitions>
-                                        <Label Text="Сегодня" 
-                                               HorizontalOptions="Center"
-                                               FontSize="13"
-                                               TextColor="Black"
-                                               Grid.Column="0"/>
-                                        <Label Text="Вт 17" 
-                                               FontSize="13"
-                                               HorizontalOptions="Center"
-                                               TextColor="Black"
-                                               Grid.Column="1"/>
-                                        <Label Text="Ср 18" 
-                                               FontSize="13"
-                                               HorizontalOptions="Center"
-                                               TextColor="Black"
-                                               Grid.Column="2"/>
-                                    </Grid>
-                                </StackLayout>
-
-                            </Grid>
+                <ListView Grid.Row="2" x:Name="WeatherForecastList" ItemsSource="{Binding fields}" 
+                          SeparatorVisibility="None" SelectionMode="None" Margin="20,20"
+                          VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <ListView.ItemTemplate>
+                        <DataTemplate >
+                            <ViewCell>
+                                <Frame BackgroundColor="#F7F2FF" 
+                                       BorderColor="#F0F0F0" 
+                                       CornerRadius="15"
+                                       Padding="0" Margin="0,0,0,20" 
+                                       HasShadow="True">
+                                     
+                                    <Label Text="{Binding Key}"
+                                           TextColor="Black"
+                                           FontSize="17"
+                                           FontAttributes="Bold"/>
+                                </Frame>
+                            </ViewCell>
                         </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
-            </StackLayout>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

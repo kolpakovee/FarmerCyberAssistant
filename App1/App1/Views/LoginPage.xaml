@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:custom="clr-namespace:App1"
              Shell.NavBarIsVisible="False"
              xmlns:vm="clr-namespace:App1.ViewModels"
-             x:Class="App1.Views.LoginPage" BackgroundColor="White">
+             x:Class="App1.Views.LoginPage" 
+             BackgroundColor="White">
     
     <ContentPage.BindingContext>
         <vm:LoginViewModel/>
