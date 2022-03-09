@@ -191,7 +191,7 @@
                   Grid.Row="2" Margin="20,20" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
                   SelectionMode="None">
                 <ListView.ItemTemplate>
-                    <DataTemplate >
+                    <DataTemplate>
                         <ViewCell>
                             <Frame BackgroundColor="White" 
                                BorderColor="#F0F0F0" 

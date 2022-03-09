@@ -1,13 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              Shell.NavBarIsVisible="False"
+             xmlns:vm="clr-namespace:App1.ViewModels"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App1.Views.AddFieldPage">
+
+    <ContentPage.BindingContext>
+        <vm:AddFieldViewModel/>
+    </ContentPage.BindingContext>
+
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Главная" 
+                   Grid.Row="0"
+                   FontSize="34" 
+                   HorizontalOptions="Center"
+                   Margin="0,37"
+                   FontAttributes="Bold"
+                   TextColor="Black"/>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

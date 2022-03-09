@@ -9925,23 +9925,24 @@ public final class R {
     public static final int notification_tile_bg=0x7f070097;
     public static final int notificationsicon=0x7f070098;
     public static final int notify_panel_notification_icon_bg=0x7f070099;
-    public static final int partlycloudy=0x7f07009a;
-    public static final int plant=0x7f07009b;
-    public static final int potatoes=0x7f07009c;
-    public static final int preference_list_divider_material=0x7f07009d;
-    public static final int pressure=0x7f07009e;
-    public static final int rain=0x7f07009f;
-    public static final int settings=0x7f0700a0;
-    public static final int shovel=0x7f0700a1;
-    public static final int snow=0x7f0700a2;
-    public static final int sunny=0x7f0700a3;
-    public static final int test_custom_background=0x7f0700a4;
-    public static final int tomato=0x7f0700a5;
-    public static final int tooltip_frame_dark=0x7f0700a6;
-    public static final int tooltip_frame_light=0x7f0700a7;
-    public static final int water=0x7f0700a8;
-    public static final int wateringcan=0x7f0700a9;
-    public static final int wind=0x7f0700aa;
+    public static final int ok=0x7f07009a;
+    public static final int partlycloudy=0x7f07009b;
+    public static final int plant=0x7f07009c;
+    public static final int potatoes=0x7f07009d;
+    public static final int preference_list_divider_material=0x7f07009e;
+    public static final int pressure=0x7f07009f;
+    public static final int rain=0x7f0700a0;
+    public static final int settings=0x7f0700a1;
+    public static final int shovel=0x7f0700a2;
+    public static final int snow=0x7f0700a3;
+    public static final int sunny=0x7f0700a4;
+    public static final int test_custom_background=0x7f0700a5;
+    public static final int tomato=0x7f0700a6;
+    public static final int tooltip_frame_dark=0x7f0700a7;
+    public static final int tooltip_frame_light=0x7f0700a8;
+    public static final int water=0x7f0700a9;
+    public static final int wateringcan=0x7f0700aa;
+    public static final int wind=0x7f0700ab;
   }
   public static final class id {
     public static final int ALT=0x7f080000;
@@ -10999,6 +11000,7 @@ public final class R {
     public static final int EmptyTheme=0x7f0f00e8;
     public static final int MainTheme=0x7f0f00e9;
     /**
+     * Base theme applied no matter what API
      * Base theme applied no matter what API
      */
     public static final int MainTheme_Base=0x7f0f00ea;

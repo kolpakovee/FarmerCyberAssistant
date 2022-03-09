@@ -16694,55 +16694,58 @@ namespace App1.Droid
 			public const int notify_panel_notification_icon_bg = 2131165337;
 			
 			// aapt resource value: 0x7F07009A
-			public const int PartlyCloudy = 2131165338;
+			public const int ok = 2131165338;
 			
 			// aapt resource value: 0x7F07009B
-			public const int plant = 2131165339;
+			public const int PartlyCloudy = 2131165339;
 			
 			// aapt resource value: 0x7F07009C
-			public const int potatoes = 2131165340;
+			public const int plant = 2131165340;
 			
 			// aapt resource value: 0x7F07009D
-			public const int preference_list_divider_material = 2131165341;
+			public const int potatoes = 2131165341;
 			
 			// aapt resource value: 0x7F07009E
-			public const int Pressure = 2131165342;
+			public const int preference_list_divider_material = 2131165342;
 			
 			// aapt resource value: 0x7F07009F
-			public const int Rain = 2131165343;
+			public const int Pressure = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int Settings = 2131165344;
+			public const int Rain = 2131165344;
 			
 			// aapt resource value: 0x7F0700A1
-			public const int shovel = 2131165345;
+			public const int Settings = 2131165345;
 			
 			// aapt resource value: 0x7F0700A2
-			public const int Snow = 2131165346;
+			public const int shovel = 2131165346;
 			
 			// aapt resource value: 0x7F0700A3
-			public const int Sunny = 2131165347;
+			public const int Snow = 2131165347;
 			
 			// aapt resource value: 0x7F0700A4
-			public const int test_custom_background = 2131165348;
+			public const int Sunny = 2131165348;
 			
 			// aapt resource value: 0x7F0700A5
-			public const int tomato = 2131165349;
+			public const int test_custom_background = 2131165349;
 			
 			// aapt resource value: 0x7F0700A6
-			public const int tooltip_frame_dark = 2131165350;
+			public const int tomato = 2131165350;
 			
 			// aapt resource value: 0x7F0700A7
-			public const int tooltip_frame_light = 2131165351;
+			public const int tooltip_frame_dark = 2131165351;
 			
 			// aapt resource value: 0x7F0700A8
-			public const int Water = 2131165352;
+			public const int tooltip_frame_light = 2131165352;
 			
 			// aapt resource value: 0x7F0700A9
-			public const int wateringCan = 2131165353;
+			public const int Water = 2131165353;
 			
 			// aapt resource value: 0x7F0700AA
-			public const int Wind = 2131165354;
+			public const int wateringCan = 2131165354;
+			
+			// aapt resource value: 0x7F0700AB
+			public const int Wind = 2131165355;
 			
 			static Drawable()
 			{
