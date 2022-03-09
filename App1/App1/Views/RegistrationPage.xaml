@@ -76,6 +76,7 @@
                 <custom:CustomEntry x:Name="PasswordEntry1" 
                                     Grid.Column="1" Grid.Row="9" 
                                     Placeholder="Пароль" 
+                                    
                                     PlaceholderColor="#C4C4C4" 
                                     CornerRadius ="25" FontSize="16" 
                                     FontFamily="SF-Pro-Text-Bold.otf"

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace App1.ViewModels
 {
-    public class MainViewModel
+    public class MainViewModel : BaseViewModel
     {
         public List<Field> fields { get; set; }
         public MainViewModel()

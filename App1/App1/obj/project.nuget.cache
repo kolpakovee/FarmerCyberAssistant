@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "IoKITOwdYd02ETR5JXCIX2Ss/AlH+8ji6MpkCfkHcJsTs/qdeb2IRF8mmYE2Roi9WUlwziewVAg7hX6t3OywKQ==",
+  "dgSpecHash": "OdzD8+DYuqI1ZoclPsK5RQjDaG/GQ0s4AUuFYReXF/26RCpRaFCzY1YcpR1SuTMWI4eTCqt1gQqINilBWVKmNw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1\\App1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Egor\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
+    "C:\\Users\\Egor\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Egor\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Egor\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\Egor\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",

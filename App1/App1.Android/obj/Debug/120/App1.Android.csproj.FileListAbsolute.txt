@@ -1303,3 +1303,4 @@ C:\Users\Egor\Desktop\FCA\App1\App1.Android\obj\Debug\120\res\drawable\water.png
 C:\Users\Egor\Desktop\FCA\App1\App1.Android\obj\Debug\120\res\drawable\pressure.png
 C:\Users\Egor\Desktop\FCA\App1\App1.Android\obj\Debug\120\res\drawable\notification.png
 C:\Users\Egor\Desktop\FCA\App1\App1.Android\obj\Debug\120\res\drawable\ok.png
+C:\Users\Egor\Desktop\FCA\App1\App1.Android\obj\Debug\120\android\assets\Newtonsoft.Json.dll

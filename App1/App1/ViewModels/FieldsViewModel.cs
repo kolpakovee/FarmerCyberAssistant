@@ -5,7 +5,7 @@ using System.Text;
 
 namespace App1.ViewModels
 {
-    internal class FieldsViewModel
+    internal class FieldsViewModel : BaseViewModel
     {
     }
 }

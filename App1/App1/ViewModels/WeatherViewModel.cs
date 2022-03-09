@@ -4,7 +4,7 @@ using System.Text;
 
 namespace App1.ViewModels
 {
-    internal class WeatherViewModel
+    internal class WeatherViewModel : BaseViewModel
     {
         public List<Weather> Weathers { get => WeatherData(); }
         private List<Weather> WeatherData()
