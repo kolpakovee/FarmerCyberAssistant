@@ -1,15 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using App1.Views;
 
 namespace App1.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
         public List<Field> fields { get; set; }
+        public string[] Fields_name { get; set; }
         public MainViewModel()
         {
             fields = f;
+            Fields_name = new string[fields.Count];
+
+            for (int i = 0; i < fields.Count; i++)
+                Fields_name[i] = fields[i].Name;
         }
 
         private List<Field> f = new List<Field>()
@@ -30,7 +36,7 @@ namespace App1.ViewModels
 
     public class Field
     {
-        public string Name { get; set; } = "Name";
+        public string Name { get; set; }
         public string CultureIcon { get; set; }   
         public string TodayIcon { get; set; }
         public string TomorrowIcon { get; set; }

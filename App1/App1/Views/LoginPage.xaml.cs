@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using App1.ViewModels;
 using Xamarin.Forms.Xaml;
 
 namespace App1.Views

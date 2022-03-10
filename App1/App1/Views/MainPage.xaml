@@ -17,24 +17,18 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
-                
-                <Label Text="Главная" 
-                   Grid.Row="0"
-                   FontSize="34" 
-                   HorizontalOptions="Center"
-                   Margin="0,37"
-                   FontAttributes="Bold"
-                   TextColor="Black"/>
 
-                <ImageButton Source="Notification.png" 
-                     Grid.Row="0"
-                     WidthRequest="38" 
-                     VerticalOptions="Start"
-                     Margin="0,37,20,0"       
-                     HeightRequest="38" 
-                     BorderColor="White"
-                     HorizontalOptions="End"
-                     BackgroundColor="White"/>
+                <StackLayout Orientation="Horizontal" 
+                             HorizontalOptions="Center"
+                             Margin="0,40,0,20">
+                    
+                    <Label Text="Главная" 
+                           FontSize="34" 
+                           HorizontalOptions="Center"
+                           FontAttributes="Bold"
+                           TextColor="Black"/>
+
+                </StackLayout>             
 
                 <Frame BorderColor="#686464"
                        Margin="20,0"
@@ -45,9 +39,10 @@
                     
                     <Picker TextColor="Black" 
                             FontSize="17"
+                            x:Name="picker"
                             Opacity="0.7"
+                            ItemsSource="{Binding Fields_name}"
                             HorizontalTextAlignment="Center"
-                            HorizontalOptions="CenterAndExpand"
                             TitleColor="#C4C4C4"
                             Title="Выберите поле"/>
                 </Frame>
@@ -65,7 +60,7 @@
                                BorderColor="#F0F0F0" 
                                CornerRadius="40"
                                Padding="0" Margin="0,0,0,0" 
-                               HasShadow="True">
+                               HasShadow="False">
                                         <StackLayout>
                                             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10">
                                                 <Label Text="{Binding Name}" 
@@ -86,16 +81,17 @@
                                                     <ColumnDefinition Width="*"/>
                                                 </Grid.ColumnDefinitions>
 
-                                                <Frame BackgroundColor="#4C52E7"
+                                                <Frame BackgroundColor="#B1B4FF"
                                                        CornerRadius="40"
                                                        Padding="10"
+                                                       HasShadow="False"
                                                        Grid.Column="0">
                                                     <StackLayout Orientation="Vertical"
                                                          HorizontalOptions="Center">
 
                                                         <Label Text="Сегодня"
                                                        FontSize="13"
-                                                       TextColor="White"/>
+                                                       TextColor="Black"/>
 
                                                         <Image Source="{Binding TodayIcon}"
                                                            Margin="0,0,0,15"
@@ -103,7 +99,7 @@
                                                     </StackLayout>
                                                 </Frame>
 
-                                                <Frame BackgroundColor="#4C52E7"
+                                                <Frame BackgroundColor="#B1B4FF"
                                                        CornerRadius="40"
                                                        Padding="10"
                                                        Grid.Column="1">
@@ -112,14 +108,14 @@
 
                                                         <Label Text="Завтра"
                                                        FontSize="13"
-                                                       TextColor="White"/>
+                                                       TextColor="Black"/>
 
                                                         <Image Source="{Binding TomorrowIcon}"
                                                            Margin="0,0,0,15"
                                                    WidthRequest="40"/>
                                                     </StackLayout>
                                                 </Frame>
-                                                <Frame BackgroundColor="#4C52E7"
+                                                <Frame BackgroundColor="#B1B4FF"
                                                        CornerRadius="40"
                                                        Padding="10"
                                                        Grid.Column="2">
@@ -128,7 +124,7 @@
 
                                                         <Label Text="Через день"
                                                        FontSize="13"
-                                                       TextColor="White"/>
+                                                       TextColor="Black"/>
 
                                                         <Image Source="{Binding AfterTomorrowIcon}"
                                                            Margin="0,0,0,15"

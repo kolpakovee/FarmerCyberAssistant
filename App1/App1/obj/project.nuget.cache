@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OdzD8+DYuqI1ZoclPsK5RQjDaG/GQ0s4AUuFYReXF/26RCpRaFCzY1YcpR1SuTMWI4eTCqt1gQqINilBWVKmNw==",
+  "dgSpecHash": "5QTjMtIXcJ4JPRc2TRlbLXFQgNQF8YM4EEGnDPCSX26JCXiEeoW/AywTO1id2oTEdKhjTLweULMVvamOdzsKRw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1\\App1.csproj",
   "expectedPackageFiles": [
@@ -14,7 +14,8 @@
     "C:\\Users\\Egor\\.nuget\\packages\\system.text.json\\6.0.2\\system.text.json.6.0.2.nupkg.sha512",
     "C:\\Users\\Egor\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\Egor\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\Egor\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+    "C:\\Users\\Egor\\.nuget\\packages\\xamarin.forms\\5.0.0.2337\\xamarin.forms.5.0.0.2337.nupkg.sha512",
+    "C:\\Users\\Egor\\.nuget\\packages\\xamarin.forms.maps\\5.0.0.2337\\xamarin.forms.maps.5.0.0.2337.nupkg.sha512"
   ],
   "logs": []
 }

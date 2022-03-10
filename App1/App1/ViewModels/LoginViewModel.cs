@@ -56,16 +56,8 @@ namespace App1.ViewModels
 
         async Task SignIn()
         {
-            var Account1 = new Account();
-            string[] errors1 = await Account1.SignUpAsync("egor333", "qwertyui");
-            System.Diagnostics.Debug.WriteLine(string.Join(' ', errors1));
-            System.Diagnostics.Debug.WriteLine(AccountItems.Username);
-
-
+            System.Diagnostics.Debug.WriteLine("user> " + _username);
             IsBusy = true;
-            string[] errors = await AccountItems.SignInAsync(Username, Password);
-            System.Diagnostics.Debug.WriteLine(string.Join(' ', errors));
-            System.Diagnostics.Debug.WriteLine(AccountItems.Username);
             await Shell.Current.GoToAsync("//main");
             IsBusy = false;
         }
