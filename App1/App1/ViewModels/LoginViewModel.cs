@@ -68,7 +68,7 @@ namespace App1.ViewModels
             }
 
             IsBusy = false;
-            System.Diagnostics.Debug.WriteLine("СРАБОТАЛО!!!");
+
             System.Diagnostics.Debug.WriteLine($"username> {_username}");
             System.Diagnostics.Debug.WriteLine($"password> {_password}");
         }

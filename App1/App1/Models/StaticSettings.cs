@@ -8,17 +8,26 @@ namespace App.Models
         public static readonly string ConfigFilePath = "config.json";
         public static readonly string AccountDataPath = "AccountData.json";
 
-        public static ConfigVariables ConfigVariables { get; private set; } = new();
+        public static ConfigVariables ConfigVariables = new()
+        {
+            ServerUrl = "farming-assistant.eastus.cloudapp.azure.com",
+            ServerPort = 80,
+            DefaultToken = "0000000000000000000000000000000000000000000000000000000000000000",
+            SendingTimeout = 5000,
+            ReceivingTimeout = 5000,
+            FieldListLimitSize = 100
+        };
+        // public static ConfigVariables ConfigVariables { get; private set; } = ConfigVariables.LoadFromFile();
     }
 
     public class ConfigVariables
     {
-        public string ServerUrl { get; init; } = "farming-assistant.eastus.cloudapp.azure.com";
-        public int ServerPort { get; init; } = 80;
-        public int SendingTimeout { get; init; } = 5000;
-        public int ReceivingTimeout { get; init; } = 5000;
-        public string DefaultToken { get; init; } = "0000000000000000000000000000000000000000000000000000000000000000";
-        public int FieldListLimitSize { get; init; } = 100;
+        public string ServerUrl { get; init; }
+        public int ServerPort { get; init; }
+        public int SendingTimeout { get; init; }
+        public int ReceivingTimeout { get; init; }
+        public string DefaultToken { get; init; }
+        public int FieldListLimitSize { get; init; }
 
         public static ConfigVariables LoadFromFile() =>
             JsonSerializer.Deserialize<ConfigVariables>(File.ReadAllText(StaticSettings.ConfigFilePath));

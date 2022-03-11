@@ -2,44 +2,52 @@
 using System.Collections.Generic;
 using System.Text;
 using App1.Views;
+using App.Models;
 
 namespace App1.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
-        public List<Field> fields { get; set; }
-        public string[] Fields_name { get; set; }
         public MainViewModel()
         {
-            fields = f;
-            Fields_name = new string[fields.Count];
-
-            for (int i = 0; i < fields.Count; i++)
-                Fields_name[i] = fields[i].Name;
+            AccountInfo.CustomerInfo.OnFieldsChanged += () => OnPropertyChanged(nameof(Fields));
         }
 
-        private List<Field> f = new List<Field>()
+        public List<DetailedField> Fields
         {
-            new Field(){Name = "Кукурузное поле", CultureIcon = "corn.png", TodayIcon = "plant.png"
-            , TomorrowIcon = "wateringCan.png", AfterTomorrowIcon = "shovel.png"},
-
-            new Field(){Name = "Морковное поле", CultureIcon = "carrot.png",  TodayIcon = "ok.png"
-            , AfterTomorrowIcon = "wateringCan.png", TomorrowIcon = "shovel.png"},
-
-            new Field(){Name = "Томатное поле", CultureIcon = "tomato.png",  TodayIcon = "shovel.png"
-            , TomorrowIcon = "plant.png", AfterTomorrowIcon = "wateringCan.png"},
-
-            new Field(){Name = "Картофельное поле", CultureIcon = "potatoes.png",  TodayIcon = "ok.png"
-            , TomorrowIcon = "ok.png", AfterTomorrowIcon = "plant.png"},
-        };
+            get
+            {
+                System.Diagnostics.Debug.WriteLine(AccountInfo.CustomerInfo.Fields.Count);
+                return DetailedField.GetDetailedField(AccountInfo.CustomerInfo.Fields);
+            }
+        }
     }
 
-    public class Field
+    public class DetailedField
     {
-        public string Name { get; set; }
-        public string CultureIcon { get; set; }   
-        public string TodayIcon { get; set; }
-        public string TomorrowIcon { get; set; }
-        public string AfterTomorrowIcon { get; set; }
+        private Dictionary<Plants, string> PlantImages = new()
+        {
+            [Plants.Carrot] = "carrot.png",
+            [Plants.Potato] = "potatoes.png",
+            [Plants.Wheat] = "grass.png",
+            [Plants.Default] = "default.png"
+        };
+
+        public Field FieldItem { get; init; }
+
+        public string PlantIcon
+        {
+            get => PlantImages[FieldItem.Plant];
+        }
+
+        public static List<DetailedField> GetDetailedField(List<Field> fields)
+        {
+            List<DetailedField> list = new();
+            
+            foreach (Field field in fields)
+                list.Add(new DetailedField() { FieldItem = field});
+
+            return list;
+        }
     }
 }

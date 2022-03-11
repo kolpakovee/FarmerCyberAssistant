@@ -10165,10 +10165,11 @@ public final class R {
     public static final int tooltip_frame_dark=0x7f0700c4;
     public static final int tooltip_frame_light=0x7f0700c5;
     public static final int touchid=0x7f0700c6;
-    public static final int user=0x7f0700c7;
-    public static final int water=0x7f0700c8;
-    public static final int wateringcan=0x7f0700c9;
-    public static final int wind=0x7f0700ca;
+    public static final int unknown=0x7f0700c7;
+    public static final int user=0x7f0700c8;
+    public static final int water=0x7f0700c9;
+    public static final int wateringcan=0x7f0700ca;
+    public static final int wind=0x7f0700cb;
   }
   public static final class id {
     public static final int ALT=0x7f080000;

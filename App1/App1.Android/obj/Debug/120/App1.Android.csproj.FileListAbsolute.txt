@@ -2116,3 +2116,4 @@ C:\Users\Egor\Desktop\FarmerCyberAssistant-main\App1\App1.Android\obj\Debug\120\
 C:\Users\Egor\Desktop\FarmerCyberAssistant-main\App1\App1.Android\obj\Debug\120\stamp\_GenerateJavaStubs.stamp
 C:\Users\Egor\Desktop\FarmerCyberAssistant-main\App1\App1.Android\obj\Debug\120\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Egor\Desktop\FarmerCyberAssistant-main\App1\App1.Android\obj\Debug\120\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Egor\Desktop\FCA\App1\App1.Android\obj\Debug\120\res\drawable\unknown.png
