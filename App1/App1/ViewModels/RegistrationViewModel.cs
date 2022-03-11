@@ -46,25 +46,35 @@ namespace App1.ViewModels
             }
         }
         public ICommand SignInCommand { get; }
-        public ICommand SignUpCommand { get; }
+        public ICommand SignUpCommand2 { get; }
 
         public RegistrationViewModel()
         {
-            SignInCommand = new Command(async () => await SignIn(),() => !IsBusy);
-            SignUpCommand = new Command(async () => await SignUp(), () => !IsBusy);
+            SignUpCommand2 = new Command(async () => await SignUp(), () => !IsBusy);
         }
 
         async Task SignUp()
         {
             IsBusy = true;
-            string[] errors = await AccountInfo.SignInAsync(Username, Password);
-            await Shell.Current.GoToAsync("//main");
-            IsBusy = false;
-        }
+            var account = new Account();
+            string[] errors = await account.SignUpAsync(Username, Password);
+            System.Diagnostics.Debug.WriteLine($"user> {Username} passworg> {Password}");
 
-        async Task SignIn()
-        {
-            await Shell.Current.GoToAsync("//login");
+            if (errors.Length > 0) { System.Diagnostics.Debug.WriteLine(string.Join(' ', errors)); }
+            else
+            {
+                AccountInfo = account;
+                string[] errorsAccount = await account.UpdateCustomerInfoAsync();
+                System.Diagnostics.Debug.WriteLine(string.Join(' ', errorsAccount));
+                await Shell.Current.GoToAsync("//main");
+            }
+
+            IsBusy = false;
         }
     }
 }
+
+
+
+
+

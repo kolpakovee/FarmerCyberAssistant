@@ -67,6 +67,7 @@
                        PlaceholderColor="#C4C4C4"
                        CornerRadius ="25" 
                        FontSize="16"   
+                       Text="{Binding Password, Mode=TwoWay}"
                        FontFamily="SF-Pro-Text-Bold.otf"
                        HorizontalTextAlignment="Center"
                        BackgroundColor="White" 
