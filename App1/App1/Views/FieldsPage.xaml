@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:App1.ViewModels"
+             xmlns:custom="clr-namespace:App1"
              xmlns:maps ="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              Shell.NavBarIsVisible="False"
              x:Class="App1.Views.FieldsPage">
@@ -35,28 +36,66 @@
                                     <Frame BackgroundColor="#F5F5FF" 
                                            BorderColor="#F0F0F0" 
                                            CornerRadius="40"
-                                           Padding="0" Margin="0,0,0,0" 
+                                           Padding="-10" Margin="0,0,0,0" 
                                            HasShadow="False">
                                         <StackLayout>
                                             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" 
                                                      Margin="0,10">
 
-                                                <Label Text="{Binding Name}" 
-                                                   TextColor="Black" 
-                                                   FontSize="21" 
-                                                   Grid.ColumnSpan="3"
-                                                   VerticalOptions="Center" 
-                                                   Margin="20,0"/>
-                                                <Image Source="{Binding CultureIcon}"
-                                                   WidthRequest="30"/>
+                                                <custom:CustomEntry x:Name="FieldName"
+                                                                    Placeholder="{Binding Name}"
+                                                                    PlaceholderColor="Black"
+                                                                    CornerRadius ="25" 
+                                                                    FontSize="21"   
+                                                                    BorderColor="#F5F5FF"
+                                                                    Margin="20,0"
+                                                                    HorizontalTextAlignment="Center"
+                                                                    BackgroundColor="#F5F5FF" 
+                                                                    IsCurvedCornersEnabled="True"/>
 
                                             </StackLayout>
-                                            <Frame BackgroundColor="Green"
+
+                                            <StackLayout Orientation="Horizontal" Margin="0,0,0,10">
+
+                                                <Frame Margin="30,0"
+                                                       Grid.Row="1"                                                   
+                                                       Padding="20,0"
+                                                       HasShadow="False"
+                                                       CornerRadius="25">
+
+                                                    <Picker TextColor="Black" 
+                                                            FontSize="15"
+                                                            x:Name="picker"
+                                                            Opacity="0.7"
+                                                            ItemsSource="{Binding Fields_name}"
+                                                            HorizontalTextAlignment="Start"
+                                                            TitleColor="#C4C4C4"
+                                                            Title="Выберите культуру"/>
+                                                </Frame>
+
+                                                <Frame Padding="5" CornerRadius="20" HasShadow="False">
+                                                    <Image Source="{Binding CultureIcon}"
+                                                   WidthRequest="30"/>
+                                                </Frame>
+
+                                            </StackLayout>
+
+                                            <StackLayout  Margin="30, 0, 30, 30">
+                                                <Frame BackgroundColor="Blue"
                                                CornerRadius="40"
-                                               HeightRequest="100"
-                                               Margin="30, 0, 30, 30">
-                                                <maps:Map IsShowingUser="True"/>
-                                            </Frame>
+                                               HeightRequest="300"
+                                               Padding="-2">
+                                                    <maps:Map IsShowingUser="True"/>
+                                                </Frame>
+                                                <Button x:Name="SignInButton" 
+                                                       Text="Сохранить" 
+                                                       HorizontalOptions="End"
+                                                       TextColor="White"
+                                                       BackgroundColor="#4C52E7" 
+                                                       FontSize="12" 
+                                                       FontAttributes="Bold" 
+                                                       CornerRadius="25"/>
+                                            </StackLayout>
                                         </StackLayout>
                                     </Frame>
                                     <Label FontSize="10"/>

@@ -12,11 +12,11 @@ namespace App1.ViewModels
     {    
         public BaseViewModel()
         {
-            AccountItems = new List<Account>(DataStore.GetItemsAsync().Result)[0];
+            AccountInfo = new List<Account>(DataStore.GetItemsAsync().Result)[0];
         }
         public IDataStore<Account> DataStore { get; set; } = DependencyService.Get<IDataStore<Account>>();
 
-        public Account AccountItems { get; set; }
+        public Account AccountInfo { get; set; }
 
         bool isBusy = false;
         public bool IsBusy
