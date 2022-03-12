@@ -24,7 +24,7 @@
                    BackgroundColor="#4C52E7">
                 <StackLayout Orientation="Horizontal" Spacing="20">
                     <Image Source="User.png" WidthRequest="50"/>
-                    <Label Text="Егор Колпаков"
+                    <Label Text="{Binding CurrentAccount.Username}"
                            VerticalOptions="Center"
                            TextColor="White"
                            FontSize="17"/>

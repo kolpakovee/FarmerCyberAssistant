@@ -58,17 +58,14 @@ namespace App1.ViewModels
         async Task SignIn()
         {
             IsBusy = true;
-            var account = new Account();
-            string[] errors = await account.SignInAsync(Username, Password);
-
+            string[] errors = await CurrentAccount.SignInAsync(Username, Password);
             if (errors.Length > 0) { System.Diagnostics.Debug.WriteLine(string.Join(' ', errors)); }
             else
             {
-                AccountInfo = account;
                 App.Current.Properties["IsLoggedIn"] = true;
+                await DataStore.SaveAsync();
                 await Shell.Current.GoToAsync("//main");
             }
-
             IsBusy = false;
             System.Diagnostics.Debug.WriteLine($"username> {_username}");
             System.Diagnostics.Debug.WriteLine($"password> {_password}");
@@ -81,8 +78,10 @@ namespace App1.ViewModels
 
         public async void PageAppearing(object sender, EventArgs e)
         {
+            System.Diagnostics.Debug.WriteLine(App.Current.Properties["IsLoggedIn"]);
             if (App.Current.Properties["IsLoggedIn"] is true)
             {
+                await DataStore.LoadAsync();
                 await Shell.Current.GoToAsync("//main");
             }
         }

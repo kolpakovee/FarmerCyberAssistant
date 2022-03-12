@@ -4,12 +4,15 @@ using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 using App.Models;
+using App1;
 
 namespace App.Services
 {
     public class MockDataStore : IDataStore<Account>
     {
         private readonly List<Account> _accounts;
+
+        public List<Account> Accounts => _accounts;
 
         public MockDataStore()
         {
@@ -34,7 +37,6 @@ namespace App.Services
         {
             var oldAccount = _accounts.Where((Account item) => item.Username == username).FirstOrDefault();
             _accounts.Remove(oldAccount);
-            System.Diagnostics.Debug.WriteLine("DELETED!");
             return await Task.FromResult(true);
         }
 
@@ -43,7 +45,7 @@ namespace App.Services
             return await Task.FromResult(_accounts.FirstOrDefault(item => item.Username == username));
         }
 
-        public async Task<List<Account>> GetItemsAsync(bool forceRefresh = false)
+        public async Task<IEnumerable<Account>> GetItemsAsync(bool forceRefresh = false)
         {
             return await Task.FromResult(_accounts);
         }
@@ -52,8 +54,13 @@ namespace App.Services
         {
             try
             {
+                // TO DO: убрать дебаги
                 string data = JsonSerializer.Serialize(_accounts);
-                File.WriteAllText(StaticSettings.AccountDataPath, data);
+                System.Diagnostics.Debug.WriteLine("NAME " + _accounts[0].Username);
+                App1.App.Current.Properties.TryAdd("AccountData", data);
+                App1.App.Current.Properties["AccountData"] = data;
+                System.Diagnostics.Debug.WriteLine("SAVED");
+                System.Diagnostics.Debug.WriteLine("HAS VAULE " + App1.App.Current.Properties["AccountData"]);
                 return await Task.FromResult(true);
             }
             catch { }
@@ -64,8 +71,10 @@ namespace App.Services
         {
             try
             {
-                string data = File.ReadAllText(StaticSettings.AccountDataPath);
+                System.Diagnostics.Debug.WriteLine("HAS VAULE " + App1.App.Current.Properties["AccountData"]);
+                string data = App1.App.Current.Properties["AccountData"].ToString();
                 var accounts = JsonSerializer.Deserialize<List<Account>>(data);
+                System.Diagnostics.Debug.WriteLine("LOADED " + accounts.Count + "!!!" + accounts[0].Username);
                 if (accounts.Count > 0)
                 {
                     _accounts.Clear();

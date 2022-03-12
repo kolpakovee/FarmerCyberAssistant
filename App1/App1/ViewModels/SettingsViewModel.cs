@@ -6,10 +6,11 @@ using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using App1.Views;
+using App.Models;
 
 namespace App1.ViewModels
 {
-    internal class SettingsViewModel
+    internal class SettingsViewModel : BaseViewModel
     {
         public ICommand AboutAppCommand { get; }
         public ICommand EmailCommand { get; }

@@ -56,19 +56,14 @@ namespace App1.ViewModels
         async Task SignUp()
         {
             IsBusy = true;
-            var account = new Account();
-            string[] errors = await account.SignUpAsync(Username, Password);
-            System.Diagnostics.Debug.WriteLine($"user> {Username} passworg> {Password}");
-
+            string[] errors = await CurrentAccount.SignUpAsync(Username, Password);
             if (errors.Length > 0) { System.Diagnostics.Debug.WriteLine(string.Join(' ', errors)); }
             else
             {
-                AccountInfo = account;
-                string[] errorsAccount = await account.UpdateCustomerInfoAsync();
-                System.Diagnostics.Debug.WriteLine(string.Join(' ', errorsAccount));
+                App.Current.Properties["IsLoggedIn"] = true;
+                await DataStore.SaveAsync();
                 await Shell.Current.GoToAsync("//main");
             }
-
             IsBusy = false;
         }
     }

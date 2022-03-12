@@ -10,15 +10,15 @@ namespace App1.ViewModels
     {
         public MainViewModel()
         {
-            AccountInfo.CustomerInfo.OnFieldsChanged += () => OnPropertyChanged(nameof(Fields));
+            CurrentAccount.CustomerInfo.OnFieldsChanged += () => OnPropertyChanged(nameof(Fields));
         }
 
         public List<DetailedField> Fields
         {
             get
             {
-                System.Diagnostics.Debug.WriteLine(AccountInfo.CustomerInfo.Fields.Count);
-                return DetailedField.GetDetailedField(AccountInfo.CustomerInfo.Fields);
+                System.Diagnostics.Debug.WriteLine(CurrentAccount.CustomerInfo.Fields.Count);
+                return DetailedField.GetDetailedField(CurrentAccount.CustomerInfo.Fields);
             }
         }
     }
@@ -30,7 +30,7 @@ namespace App1.ViewModels
             [Plants.Carrot] = "carrot.png",
             [Plants.Potato] = "potatoes.png",
             [Plants.Wheat] = "grass.png",
-            [Plants.Default] = "default.png"
+            [Plants.None] = "default.png"
         };
 
         public Field FieldItem { get; init; }

@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace App.Models
 {
     public interface ICustomerInfo
     {
+        event Action OnFieldsChanged;
         List<Field> Fields { get; set; }
         public void AddField(Field field);
         public void DeleteField(Field field);
@@ -11,15 +13,16 @@ namespace App.Models
 
     public interface IField
     {
-        Plants Plant { get; set; }
-        string Location { get; set; }
         string Name { get; set; }
+        double Latitude { get; set; }
+        double Longitude { get; set; }
+        Plants Plant { get; set; }
         long PlantingDate { get; set; }
     }
 
     public interface IRecommendation
     {
-        string Type { get; init; }
+        RecommendationType Type { get; init; }
         string Value { get; init; }
     }
 }
