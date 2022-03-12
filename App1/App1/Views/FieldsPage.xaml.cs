@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using App1.ViewModels;
 
 namespace App1.Views
 {
@@ -15,6 +16,7 @@ namespace App1.Views
         public FieldsPage()
         {
             InitializeComponent();
+            MainPicker.SelectedIndexChanged += (BindingContext as MainViewModel).ChangedSelectedIndex;
         }
     }
 }

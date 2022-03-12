@@ -54,6 +54,7 @@ namespace App.Services
         {
             try
             {
+                System.Diagnostics.Debug.WriteLine("Start!");
                 // TO DO: убрать дебаги
                 string data = JsonSerializer.Serialize(_accounts);
                 System.Diagnostics.Debug.WriteLine("NAME " + _accounts[0].Username);
@@ -70,7 +71,7 @@ namespace App.Services
         public async Task<bool> LoadAsync()
         {
             try
-            {
+            { 
                 System.Diagnostics.Debug.WriteLine("HAS VAULE " + App1.App.Current.Properties["AccountData"]);
                 string data = App1.App.Current.Properties["AccountData"].ToString();
                 var accounts = JsonSerializer.Deserialize<List<Account>>(data);
@@ -84,8 +85,10 @@ namespace App.Services
                     }
                     return await Task.FromResult(true);
                 }
+                System.Diagnostics.Debug.WriteLine("END!");
             }
             catch { }
+            System.Diagnostics.Debug.WriteLine("END!");
             return await Task.FromResult(false);
         }
     }

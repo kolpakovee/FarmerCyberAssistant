@@ -121,13 +121,28 @@ namespace App.Models
 
         private string[] UpdateCustomerInfo() => _requestSender.UpdateCustomerInfo(CustomerInfo);
 
-        private string[] LoadRecommendations(Field field)
+        public string[] LoadRecommendations(Field field)
         {
-            System.Diagnostics.Debug.WriteLine("111");
-            if (_recommendations.Count > StaticSettings.ConfigVariables.FieldListLimitSize * 1.1) {
+            System.Diagnostics.Debug.WriteLine("444");
+            System.Diagnostics.Debug.WriteLine(_recommendations.Count);
+            System.Diagnostics.Debug.WriteLine("444");
+            System.Diagnostics.Debug.WriteLine(StaticSettings.ConfigVariables.FieldListLimitSize);
+            System.Diagnostics.Debug.WriteLine("444");
+
+            if (_recommendations.Count > StaticSettings.ConfigVariables.FieldListLimitSize * 1.1) 
+            {
                 System.Diagnostics.Debug.WriteLine("222");
-                _recommendations.Clear(); }
+                _recommendations.Clear(); 
+            }
+
+            System.Diagnostics.Debug.WriteLine("666");
             bool updateRequired = true;
+            System.Diagnostics.Debug.WriteLine(_recommendations.ContainsKey(new Field()));
+            System.Diagnostics.Debug.WriteLine("666");
+
+            System.Diagnostics.Debug.WriteLine(field);
+            System.Diagnostics.Debug.WriteLine("666");
+
             if (_recommendations.ContainsKey(field))
             {
                 System.Diagnostics.Debug.WriteLine("222");
@@ -153,14 +168,18 @@ namespace App.Models
             }
             System.Diagnostics.Debug.WriteLine("222");
 
+
             if (updateRequired)
             {
+                System.Diagnostics.Debug.WriteLine("777");
                 string[] getRecommendationsErrors =
                     _requestSender.GetRecommendations(field, out Recommendation[] newRecommendations);
                 if (getRecommendationsErrors.Length == 0)
                 {
+                    System.Diagnostics.Debug.WriteLine("77777");
                     _recommendations[field] = newRecommendations;
                 }
+                System.Diagnostics.Debug.WriteLine("777");
                 return getRecommendationsErrors;
             }
             System.Diagnostics.Debug.WriteLine("333");

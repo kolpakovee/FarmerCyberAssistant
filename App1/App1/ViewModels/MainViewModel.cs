@@ -22,15 +22,36 @@ namespace App1.ViewModels
                 return DetailedField.GetDetailedField(CurrentAccount.CustomerInfo.Fields);
             }
         }
+
+        DetailedField selectedField;
+        public DetailedField SelectedField
+        {
+            get { return selectedField; }
+            set
+            {
+                if (selectedField != value)
+                {
+                    selectedField = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        public async void ChangedSelectedIndex(object sender, EventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("HA!");
+        }
     }
 
     public class DetailedField: BaseViewModel
     {
-        public DetailedField()
+        public  DetailedField(Field field)
         {
-
-            var errors = CurrentAccount.LoadRecommendationsAsync(FieldItem).Result;
-            System.Diagnostics.Debug.WriteLine("Ошибки:" +  string.Join(' ', errors));
+            FieldItem = field;
+            var task = CurrentAccount.LoadRecommendations(FieldItem);
+            System.Diagnostics.Debug.WriteLine("12345");
+            System.Diagnostics.Debug.WriteLine("Ошибки:" +  string.Join(' ', task));
+            System.Diagnostics.Debug.WriteLine("12345");
         }
 
         public Dictionary<RecommendationType, string> Recommendations = new()
@@ -141,7 +162,7 @@ namespace App1.ViewModels
             List<DetailedField> list = new();
             
             foreach (Field field in fields)
-                list.Add(new DetailedField() { FieldItem = field});
+                list.Add(new DetailedField(field));
 
             return list;
         }
