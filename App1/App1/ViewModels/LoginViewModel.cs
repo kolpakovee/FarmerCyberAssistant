@@ -52,6 +52,7 @@ namespace App1.ViewModels
         {
             SignInCommand = new Command(async () => await SignIn(),() => !IsBusy);
             SignUpCommand = new Command(async () => await SignUp(), () => !IsBusy);
+            App.Current.Properties.TryAdd("IsLoggedIn", false);
         }
 
         async Task SignIn()
@@ -64,11 +65,11 @@ namespace App1.ViewModels
             else
             {
                 AccountInfo = account;
+                App.Current.Properties["IsLoggedIn"] = true;
                 await Shell.Current.GoToAsync("//main");
             }
 
             IsBusy = false;
-
             System.Diagnostics.Debug.WriteLine($"username> {_username}");
             System.Diagnostics.Debug.WriteLine($"password> {_password}");
         }
@@ -76,6 +77,14 @@ namespace App1.ViewModels
         async Task SignUp()
         {
             await Shell.Current.GoToAsync("//login/registration");
+        }
+
+        public async void PageAppearing(object sender, EventArgs e)
+        {
+            if (App.Current.Properties["IsLoggedIn"] is true)
+            {
+                await Shell.Current.GoToAsync("//main");
+            }
         }
     }
 }

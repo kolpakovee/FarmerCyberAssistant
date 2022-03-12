@@ -7,7 +7,7 @@
              BackgroundColor="White">
 
     <ContentPage.BindingContext>
-        <vm:LoginViewModel/>
+        <vm:SettingsViewModel/>
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
@@ -150,8 +150,12 @@
                     <Label Text="О приложении" TextColor="Black"
                        FontSize="15"/>
                 </StackLayout>
-                <Image Source="Chevron.png" 
-                           WidthRequest="15" Grid.Column="1"/>
+                <ImageButton Source="Chevron.png" 
+                           WidthRequest="15" Grid.Column="1" 
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="FillAndExpand"
+                           BackgroundColor="White"
+                           Command="{Binding AboutAppCommand}"/>
             </Grid>
 
             <Grid Margin="0,0,30,0">
@@ -165,8 +169,12 @@
                     <Label Text="Почта разработчиков" TextColor="Black"
                        FontSize="15"/>
                 </StackLayout>
-                <Image Source="Chevron.png" 
-                           WidthRequest="15" Grid.Column="1"/>
+                <ImageButton Source="Chevron.png" 
+                           WidthRequest="15" Grid.Column="1"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="FillAndExpand"
+                           BackgroundColor="White"
+                           Command="{Binding EmailCommand}"/>
             </Grid>
 
             <BoxView HorizontalOptions="FillAndExpand"
@@ -175,8 +183,11 @@
                      Color="#E6D7FE"/>
 
             <Label Text="Выйти" TextColor="#F13D3D" FontSize="15" 
-                   Margin="40,0"/>
-
+                   Margin="40,0">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ExitCommand}" />
+                </Label.GestureRecognizers>
+            </Label>   
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

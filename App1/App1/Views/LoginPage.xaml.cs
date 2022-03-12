@@ -17,6 +17,7 @@ namespace App1.Views
         { 
             InitializeComponent();
             loginIcon.Source = ImageSource.FromResource("App1.Icons.LoginIcon.png");
+            Appearing += (BindingContext as LoginViewModel).PageAppearing;
         }
     }
 }

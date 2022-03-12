@@ -5,11 +5,11 @@
              xmlns:vm="clr-namespace:App1.ViewModels"
              x:Class="App1.Views.LoginPage" 
              BackgroundColor="White">
-    
+
     <ContentPage.BindingContext>
         <vm:LoginViewModel/>
     </ContentPage.BindingContext>
-    
+
     <ContentPage.Content>
         <StackLayout>
             <Grid>
