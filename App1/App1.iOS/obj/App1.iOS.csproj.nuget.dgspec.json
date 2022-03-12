@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Development\\Xamarin\\FarmerCyberAssistant\\App1\\App1.iOS\\App1.iOS.csproj": {}
+    "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1.iOS\\App1.iOS.csproj": {}
   },
   "projects": {
-    "D:\\Development\\Xamarin\\FarmerCyberAssistant\\App1\\App1.iOS\\App1.iOS.csproj": {
+    "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1.iOS\\App1.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Development\\Xamarin\\FarmerCyberAssistant\\App1\\App1.iOS\\App1.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1.iOS\\App1.iOS.csproj",
         "projectName": "App1.iOS",
-        "projectPath": "D:\\Development\\Xamarin\\FarmerCyberAssistant\\App1\\App1.iOS\\App1.iOS.csproj",
-        "packagesPath": "C:\\Users\\angel\\.nuget\\packages\\",
-        "outputPath": "D:\\Development\\Xamarin\\FarmerCyberAssistant\\App1\\App1.iOS\\obj\\",
+        "projectPath": "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1.iOS\\App1.iOS.csproj",
+        "packagesPath": "C:\\Users\\Egor\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\angel\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Egor\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +28,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "D:\\Development\\Xamarin\\FarmerCyberAssistant\\App1\\App1\\App1.csproj": {
-                "projectPath": "D:\\Development\\Xamarin\\FarmerCyberAssistant\\App1\\App1\\App1.csproj"
+              "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1\\App1.csproj": {
+                "projectPath": "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1\\App1.csproj"
               }
             }
           }
@@ -77,21 +73,17 @@
         }
       }
     },
-    "D:\\Development\\Xamarin\\FarmerCyberAssistant\\App1\\App1\\App1.csproj": {
+    "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1\\App1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Development\\Xamarin\\FarmerCyberAssistant\\App1\\App1\\App1.csproj",
+        "projectUniqueName": "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1\\App1.csproj",
         "projectName": "App1",
-        "projectPath": "D:\\Development\\Xamarin\\FarmerCyberAssistant\\App1\\App1\\App1.csproj",
-        "packagesPath": "C:\\Users\\angel\\.nuget\\packages\\",
-        "outputPath": "D:\\Development\\Xamarin\\FarmerCyberAssistant\\App1\\App1\\obj\\",
+        "projectPath": "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1\\App1.csproj",
+        "packagesPath": "C:\\Users\\Egor\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\angel\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Egor\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -153,7 +145,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

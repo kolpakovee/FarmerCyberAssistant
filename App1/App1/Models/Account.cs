@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
@@ -7,7 +8,6 @@ namespace System.Runtime.CompilerServices
 {
     internal static class IsExternalInit { }
 }
-
 namespace App.Models
 {
     public class Account : IAsyncAccount
@@ -24,21 +24,29 @@ namespace App.Models
             CustomerInfo = new CustomerInfo();
         }
 
+        [JsonConstructor]
+        public Account(string username, CustomerInfo customerInfo, string authToken) : this()
+        {
+            Username = username;
+            CustomerInfo = customerInfo;
+            AuthToken = authToken;
+        }
+
         public event Action OnUsernameChanged;
         public event Action OnCustomerInfoChanged;
 
+        [JsonIgnore]
         public bool IsAuthorized => Username is not null;
-        //public string Username
-        //{
-        //    get => _username;
-        //    protected set
-        //    {
-        //        _username = value;
-        //        OnUsernameChanged?.Invoke();
-        //    }
+        public string Username
+        {
+            get => _username;
+            protected set
+            {
+                _username = value;
+                OnUsernameChanged?.Invoke();
+            }
 
-        //}
-        public string Username { get; set; }
+        }
 
         public CustomerInfo CustomerInfo
         {
@@ -67,10 +75,17 @@ namespace App.Models
             await Task.Run(() => SignIn(username, password));
         public async Task<string[]> UpdateCustomerInfoAsync() =>
             await Task.Run(() => UpdateCustomerInfo());
-        public async Task<string[]> LoadRecommendationsAsync(Field field) =>
+        public async Task<string[]> LoadRecommendationsAsync(Field field) => 
             await Task.Run(() => LoadRecommendations(field));
 
-        public Recommendation[] GetRecommendations(Field field) => _recommendations[field];
+        public Recommendation[] GetRecommendations(Field field)
+        {
+            if (_recommendations.ContainsKey(field))
+            {
+                return _recommendations[field];
+            }
+            return Array.Empty<Recommendation>();
+        }
 
         private string[] SignUp(string username, string password)
         {
@@ -108,17 +123,23 @@ namespace App.Models
 
         private string[] LoadRecommendations(Field field)
         {
-            if (_recommendations.Count > StaticSettings.ConfigVariables.FieldListLimitSize * 1.1) { _recommendations.Clear(); }
+            System.Diagnostics.Debug.WriteLine("111");
+            if (_recommendations.Count > StaticSettings.ConfigVariables.FieldListLimitSize * 1.1) {
+                System.Diagnostics.Debug.WriteLine("222");
+                _recommendations.Clear(); }
             bool updateRequired = true;
             if (_recommendations.ContainsKey(field))
             {
+                System.Diagnostics.Debug.WriteLine("222");
                 if (_recommendations[field].Length > 0)
                 {
+                    System.Diagnostics.Debug.WriteLine("222");
                     updateRequired = false;
                     foreach (Recommendation recommendation in _recommendations[field])
                     {
                         if (!recommendation.IsRelevant)
                         {
+                            System.Diagnostics.Debug.WriteLine("222");
                             updateRequired = true;
                             break;
                         }
@@ -127,8 +148,11 @@ namespace App.Models
             }
             else
             {
+                System.Diagnostics.Debug.WriteLine("345");
                 _recommendations.Add(field, Array.Empty<Recommendation>());
             }
+            System.Diagnostics.Debug.WriteLine("222");
+
             if (updateRequired)
             {
                 string[] getRecommendationsErrors =
@@ -139,6 +163,7 @@ namespace App.Models
                 }
                 return getRecommendationsErrors;
             }
+            System.Diagnostics.Debug.WriteLine("333");
             return Array.Empty<string>();
         }
     }

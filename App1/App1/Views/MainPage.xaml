@@ -58,11 +58,12 @@
                                 <StackLayout>
                                     <Frame BackgroundColor="#F5F5FF" 
                                BorderColor="#F0F0F0" 
-                               CornerRadius="40"
+                               CornerRadius="20"
                                Padding="0" Margin="0,0,0,0" 
                                HasShadow="False">
                                         <StackLayout>
-                                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10">
+                                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" 
+                                                         Margin="0,10,0,0">
                                                 <Label Text="{Binding FieldItem.Name}" 
                                                    TextColor="Black" 
                                                    FontSize="21" 
@@ -71,64 +72,117 @@
                                                    Margin="20,0"/>
                                                 <Image Source="{Binding PlantIcon}"
                                                    WidthRequest="30"/>
-
                                             </StackLayout>
-                                            <Grid ColumnSpacing="10"
-                                                  Padding="10,0,10,10">
+
+                                            <Frame HasShadow="False"
+                                                   Padding="10,5"
+                                                   HorizontalOptions="CenterAndExpand"
+                                                   CornerRadius="15"
+                                                   BackgroundColor="#4C52E7">
+
+                                                <Label Text="Рекомендации на сегодня:"
+                                                   FontSize="15"
+                                                   HorizontalOptions="Center"
+                                                   VerticalOptions="Center"
+                                                   TextColor="White"/>
+                                            </Frame>
+                                            <Grid>
                                                 <Grid.ColumnDefinitions>
                                                     <ColumnDefinition Width="*"/>
                                                     <ColumnDefinition Width="*"/>
                                                     <ColumnDefinition Width="*"/>
                                                 </Grid.ColumnDefinitions>
-
+                                                
                                                 <Frame BackgroundColor="#B1B4FF"
-                                                       CornerRadius="40"
+                                                       CornerRadius="10"
                                                        Padding="10"
+                                                       Margin="0,0,0,10"
                                                        HasShadow="False"
                                                        Grid.Column="0">
                                                     <StackLayout Orientation="Vertical"
-                                                         HorizontalOptions="Center">
+                                                         VerticalOptions="Center">
 
-                                                        <Label Text="Сегодня"
-                                                       FontSize="13"
-                                                       TextColor="Black"/>
+                                                        <Frame HasShadow="False"
+                                                               Padding="3"
+                                                               Margin="-5,-5,-5,5"
+                                                               CornerRadius="10"
+                                                               HorizontalOptions="CenterAndExpand"
+                                                               VerticalOptions="CenterAndExpand">
+                                                            
+                                                            <Label Text="{Binding FirstRecommendation}"
+                                                               Margin="0,5"
+                                                               HorizontalTextAlignment="Center"
+                                                               TextColor="Black"
+                                                               FontSize="11"/>
+                                                        </Frame>
 
-                                                        <Image Source="{Binding TodayIcon}"
-                                                           Margin="0,0,0,15"
-                                                   WidthRequest="40"/>
+                                                        <Image Source="{Binding FirstRecommendationIcon}"
+                                                           HorizontalOptions="Center"
+                                                           Margin="0,0,0,5"                                                             
+                                                           WidthRequest="40"/>
+
                                                     </StackLayout>
                                                 </Frame>
 
                                                 <Frame BackgroundColor="#B1B4FF"
-                                                       CornerRadius="40"
+                                                       CornerRadius="10"
                                                        Padding="10"
+                                                       Margin="0,0,0,10"
+                                                       HasShadow="False"
                                                        Grid.Column="1">
                                                     <StackLayout Orientation="Vertical"
-                                                         HorizontalOptions="Center">
+                                                         VerticalOptions="Center">
 
-                                                        <Label Text="Завтра"
-                                                       FontSize="13"
-                                                       TextColor="Black"/>
+                                                        <Frame HasShadow="False"
+                                                               Padding="3"
+                                                               Margin="-5,-5,-5,5"
+                                                               CornerRadius="10"
+                                                               HorizontalOptions="CenterAndExpand"
+                                                               VerticalOptions="CenterAndExpand">
 
-                                                        <Image Source="{Binding TomorrowIcon}"
-                                                           Margin="0,0,0,15"
-                                                   WidthRequest="40"/>
+                                                            <Label Text="{Binding SecondRecommendation}"
+                                                               Margin="0,5"
+                                                               HorizontalTextAlignment="Center"
+                                                               TextColor="Black"
+                                                               FontSize="11"/>
+                                                        </Frame>
+
+                                                        <Image Source="{Binding SecondRecommendationIcon}"
+                                                           HorizontalOptions="Center"
+                                                           Margin="0,0,0,5"                                                             
+                                                           WidthRequest="40"/>
+
                                                     </StackLayout>
                                                 </Frame>
                                                 <Frame BackgroundColor="#B1B4FF"
-                                                       CornerRadius="40"
+                                                       CornerRadius="10"
                                                        Padding="10"
+                                                       Margin="0,0,0,10"
+                                                       HasShadow="False"
                                                        Grid.Column="2">
                                                     <StackLayout Orientation="Vertical"
-                                                         HorizontalOptions="Center">
+                                                         VerticalOptions="Center">
 
-                                                        <Label Text="Через день"
-                                                       FontSize="13"
-                                                       TextColor="Black"/>
+                                                        <Frame HasShadow="False"
+                                                               Padding="3"
+                                                               Margin="-5,-5,-5,5"
+                                                               CornerRadius="10"
+                                                               HorizontalOptions="CenterAndExpand"
+                                                               VerticalOptions="CenterAndExpand">
 
-                                                        <Image Source="{Binding AfterTomorrowIcon}"
-                                                           Margin="0,0,0,15"
-                                                   WidthRequest="40"/>
+                                                            <Label Text="{Binding ThirdRecommendation}"
+                                                               Margin="0,5"
+                                                               HorizontalTextAlignment="Center"
+                                                               TextColor="Black"
+                                                               FontSize="11"/>
+                                                            
+                                                        </Frame>
+
+                                                        <Image Source="{Binding ThirdRecommendationIcon}"
+                                                           HorizontalOptions="Center"
+                                                           Margin="0,0,0,5"                                                             
+                                                           WidthRequest="40"/>
+
                                                     </StackLayout>
                                                 </Frame>
                                             </Grid>

@@ -3737,25 +3737,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\angel\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Egor\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Development\\Xamarin\\FarmerCyberAssistant\\App1\\App1.Android\\App1.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1.Android\\App1.Android.csproj",
       "projectName": "App1.Android",
-      "projectPath": "D:\\Development\\Xamarin\\FarmerCyberAssistant\\App1\\App1.Android\\App1.Android.csproj",
-      "packagesPath": "C:\\Users\\angel\\.nuget\\packages\\",
-      "outputPath": "D:\\Development\\Xamarin\\FarmerCyberAssistant\\App1\\App1.Android\\obj\\",
+      "projectPath": "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1.Android\\App1.Android.csproj",
+      "packagesPath": "C:\\Users\\Egor\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\angel\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Egor\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3768,8 +3763,8 @@
       "frameworks": {
         "monoandroid12.0": {
           "projectReferences": {
-            "D:\\Development\\Xamarin\\FarmerCyberAssistant\\App1\\App1\\App1.csproj": {
-              "projectPath": "D:\\Development\\Xamarin\\FarmerCyberAssistant\\App1\\App1\\App1.csproj"
+            "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1\\App1.csproj": {
+              "projectPath": "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1\\App1.csproj"
             }
           }
         }

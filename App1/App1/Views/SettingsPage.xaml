@@ -13,7 +13,7 @@
     <ContentPage.Content>
         <StackLayout Spacing="20">
             <Label Text="Настройки" TextColor="Black"
-                   Margin="0,37"
+                   Margin="0,37,0,10"
                    FontSize="34" FontAttributes="Bold"
                    HorizontalTextAlignment="Center"/>
 
