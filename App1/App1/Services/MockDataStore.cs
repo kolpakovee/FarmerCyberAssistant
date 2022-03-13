@@ -88,7 +88,7 @@ namespace App.Services
                 System.Diagnostics.Debug.WriteLine("END!");
             }
             catch { }
-            System.Diagnostics.Debug.WriteLine("END!");
+            System.Diagnostics.Debug.WriteLine("ACCOUNT LOADED");
             return await Task.FromResult(false);
         }
     }

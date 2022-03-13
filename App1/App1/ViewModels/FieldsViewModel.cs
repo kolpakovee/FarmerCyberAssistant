@@ -11,6 +11,25 @@ namespace App1.ViewModels
         public FieldsViewModel()
         {
             System.Diagnostics.Debug.WriteLine("FIELDS VIEW MODEL");
+            if (Fields.Count > 0)
+            {
+                SelectedField = Fields[0];
+            }
+        }
+
+        DetailedField selectedField;
+        public DetailedField SelectedField
+        {
+            get { return selectedField; }
+            set
+            {
+                System.Diagnostics.Debug.WriteLine(App.Current.Properties["IsLoggedIn"]);
+                if (selectedField != value)
+                {
+                    selectedField = value;
+                    OnPropertyChanged();
+                }
+            }
         }
     }
 }
