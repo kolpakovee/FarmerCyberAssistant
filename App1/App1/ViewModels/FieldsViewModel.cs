@@ -1,16 +1,22 @@
 ﻿using App.Models;
-using FarmingAssistant.Views;
+using App1.Views;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.Maps;
 
-namespace FarmingAssistant.ViewModels
+namespace App1.ViewModels
 {
     internal class FieldsViewModel : BaseViewModel
     {
+        private readonly Geocoder _geocoder = new();
+
         public ICommand CreateFieldCommand { get; }
         public ICommand UpdateFieldCommand { get; }
         public ICommand DeleteFieldCommand { get; }
@@ -20,10 +26,18 @@ namespace FarmingAssistant.ViewModels
             CreateFieldCommand = new Command(async () => await CreateField(), () => !IsBusy);
             UpdateFieldCommand = new Command(async () => await UpdateField(), () => !IsBusy);
             DeleteFieldCommand = new Command(async () => await DeleteField(), () => !IsBusy);
-            System.Diagnostics.Debug.WriteLine("FIELDS VIEW MODEL");
             if (CurrentAccount.CustomerInfo.Fields.Count > 0)
             {
                 SelectedField = CurrentAccount.CustomerInfo.Fields[0];
+            }
+        }
+
+        public ObservableCollection<Field> BindingFields
+        {
+            get => new(CurrentAccount.CustomerInfo.Fields);
+            set
+            {
+                OnPropertyChanged();
             }
         }
 
@@ -44,41 +58,54 @@ namespace FarmingAssistant.ViewModels
         private async Task CreateField()
         {
             IsBusy = true;
+            Task<Location> task = Geolocation.GetLastKnownLocationAsync();
+            Location location = task.Result;
             CurrentAccount.CustomerInfo.AddField(new Field()
             {
                 Plant = Plants.None,
                 Name = "Новое поле",
-                PlantingDate = 13032022
+                PlantingDate = 13032022,
+                Longitude = location.Longitude,
+                Latitude = location.Latitude,
             });
-            SelectedField = CurrentAccount.CustomerInfo.Fields[^1];
             await SaveChanges();
+            SelectedField = CurrentAccount.CustomerInfo.Fields[^1];
             IsBusy = false;
-            System.Diagnostics.Debug.WriteLine($"Field created, count {CurrentAccount.CustomerInfo.Fields.Count}");
         }
 
         private async Task UpdateField()
         {
             IsBusy = true;
+            var remainedField = SelectedField.Name;
             await SaveChanges();
+            SelectedField = BindingFields.FirstOrDefault(x => x.Name == remainedField);
             IsBusy = false;
-            System.Diagnostics.Debug.WriteLine($"Field updated");
         }
 
         private async Task DeleteField()
         {
             IsBusy = true;
             CurrentAccount.CustomerInfo.DeleteField(SelectedField);
-            SelectedField = CurrentAccount.CustomerInfo.Fields.Count > 0 ? CurrentAccount.CustomerInfo.Fields[0] : null;
             await SaveChanges();
+            SelectedField = CurrentAccount.CustomerInfo.Fields.Count > 0 ? CurrentAccount.CustomerInfo.Fields[0] : null;
             IsBusy = false;
-            System.Diagnostics.Debug.WriteLine($"Field deleted, count {CurrentAccount.CustomerInfo.Fields.Count}");
         }
 
         private async Task SaveChanges()
         {
             await DataStore.SaveAsync();
             await CurrentAccount.UpdateCustomerInfoAsync();
-            OnPropertyChanged("CurrentAccount.CustomerInfo.Fields");
+            BindingFields = new ObservableCollection<Field>(CurrentAccount.CustomerInfo.Fields);
+        }
+
+        public void OnMapChanged(System.Object sender, Xamarin.Forms.Maps.MapClickedEventArgs e)
+        {
+            var map = (Xamarin.Forms.Maps.Map)sender;
+            map.Pins.Clear();
+            map.Pins.Add(new Pin() { Label = "Position", Position = e.Position });
+            map.MoveToRegion(MapSpan.FromCenterAndRadius(e.Position, map.VisibleRegion.Radius));
+            SelectedField.Latitude = e.Position.Latitude;
+            SelectedField.Longitude = e.Position.Longitude;
         }
     }
 }

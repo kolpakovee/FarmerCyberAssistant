@@ -2123,11 +2123,6 @@ D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\andr
 C:\Users\Egor\Desktop\FCA\App1\App1.Android\obj\Debug\120\res\drawable\seeds.png
 D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\bin\Debug\App1.Android.dll
 D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\bin\Debug\App1.Android.pdb
-D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\bin\Debug\com.companyname.FarmingAssistant.apk
-D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\bin\Debug\com.companyname.FarmingAssistant.aab
-D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\bin\Debug\com.companyname.FarmingAssistant-Signed.aab
-D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\bin\Debug\com.companyname.FarmingAssistant-Signed.apk
-D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\bin\Debug\com.companyname.FarmingAssistant-Signed.apk.idsig
 D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\bin\Debug\App1.dll
 D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\bin\Debug\App1.pdb
 D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\MonoAndroid,Version=v12.0.AssemblyAttributes.cs
@@ -2171,10 +2166,7 @@ D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\App1
 D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\App1.Android.csproj.CopyComplete
 D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\App1.Android.dll
 D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\App1.Android.pdb
-D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\android\bin\com.companyname.FarmingAssistant.apk
 D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\android\bin\base.zip
-D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\android\bin\com.companyname.FarmingAssistant.aab
-D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\android\bin\com.companyname.FarmingAssistant.apks
 D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\res\values\styles.xml
 D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\res\values\colors.xml
 D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\res\mipmap-anydpi-v26\icon.xml
@@ -2867,3 +2859,14 @@ D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\stam
 D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\stamp\_GenerateJavaStubs.stamp
 D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\stamp\_GeneratePackageManagerJava.stamp
 D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\stamp\_ResolveLibraryProjectImports.stamp
+D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\bin\Debug\com.companyname.App1.apk
+D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\bin\Debug\com.companyname.App1.aab
+D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\bin\Debug\com.companyname.App1-Signed.aab
+D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\bin\Debug\com.companyname.App1-Signed.apk
+D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\bin\Debug\com.companyname.App1-Signed.apk.idsig
+D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\android\bin\com.companyname.App1.apk
+D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\android\bin\com.companyname.App1.aab
+D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\android\bin\com.companyname.App1.apks
+D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\android\src\crc64ad68f59cd763e462\CustomEntryRenderer.java
+D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\android\src\crc64ad68f59cd763e462\MainActivity.java
+D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\android\src\com\companyname\app1\R.java

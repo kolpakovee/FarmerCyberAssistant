@@ -5,7 +5,7 @@
     Changes to this file may cause incorrect behavior and will be lost if
     the contents are regenerated.
 -->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.companyname.app1" android:installLocation="auto" android:versionCode="1" android:versionName="1.0">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.companyname.App1" android:installLocation="auto" android:versionCode="1" android:versionName="1.0">
   <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="31" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -35,11 +35,11 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <provider android:name="xamarin.essentials.fileProvider" android:authorities="com.companyname.app1.fileProvider" android:exported="false" android:grantUriPermissions="true">
+    <provider android:name="xamarin.essentials.fileProvider" android:authorities="com.companyname.App1.fileProvider" android:exported="false" android:grantUriPermissions="true">
       <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/xamarin_essentials_fileprovider_file_paths" />
     </provider>
     <receiver android:name="crc643f46942d9dd1fff9.PowerSaveModeBroadcastReceiver" android:enabled="true" android:exported="false" />
-    <provider android:name="mono.MonoRuntimeProvider" android:authorities="com.companyname.app1.mono.MonoRuntimeProvider.__mono_init__" android:exported="false" android:initOrder="1999999999" />
+    <provider android:name="mono.MonoRuntimeProvider" android:authorities="com.companyname.App1.mono.MonoRuntimeProvider.__mono_init__" android:exported="false" android:initOrder="1999999999" />
     <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
     <activity android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
   </application>

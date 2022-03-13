@@ -17,7 +17,7 @@
 
 	/* 1: App1.dll */
 	/* uncompressed_file_size */
-	.word	860160
+	.word	870400
 	/* loaded */
 	.byte	0
 	/* data */
@@ -53,7 +53,7 @@
 
 	/* 5: Mono.Android.dll */
 	/* uncompressed_file_size */
-	.word	2186240
+	.word	2192896
 	/* loaded */
 	.byte	0
 	/* data */
@@ -305,7 +305,7 @@
 
 	/* 33: Xamarin.AndroidX.Core.dll */
 	/* uncompressed_file_size */
-	.word	594432
+	.word	596480
 	/* loaded */
 	.byte	0
 	/* data */
@@ -422,7 +422,7 @@
 
 	/* 46: Xamarin.Essentials.dll */
 	/* uncompressed_file_size */
-	.word	37376
+	.word	47104
 	/* loaded */
 	.byte	0
 	/* data */
@@ -539,7 +539,7 @@
 
 	/* 59: mscorlib.dll */
 	/* uncompressed_file_size */
-	.word	2191360
+	.word	2182656
 	/* loaded */
 	.byte	0
 	/* data */

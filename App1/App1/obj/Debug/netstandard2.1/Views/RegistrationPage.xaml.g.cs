@@ -8,28 +8,28 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("App1.Views.RegistrationPage.xaml", "Views/RegistrationPage.xaml", typeof(global::FarmingAssistant.Views.RegistrationPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("App1.Views.RegistrationPage.xaml", "Views/RegistrationPage.xaml", typeof(global::App1.Views.RegistrationPage))]
 
-namespace FarmingAssistant.Views {
+namespace App1.Views {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\RegistrationPage.xaml")]
     public partial class RegistrationPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::FarmingAssistant.CustomEntry NameEntry;
+        private global::App1.CustomEntry NameEntry;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::FarmingAssistant.CustomEntry SurnameEntry;
+        private global::App1.CustomEntry SurnameEntry;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::FarmingAssistant.CustomEntry LoginEntry2;
+        private global::App1.CustomEntry LoginEntry2;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::FarmingAssistant.CustomEntry PasswordEntry1;
+        private global::App1.CustomEntry PasswordEntry1;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::FarmingAssistant.CustomEntry PasswordEntry2;
+        private global::App1.CustomEntry PasswordEntry2;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Button SignUpButton2;
@@ -37,11 +37,11 @@ namespace FarmingAssistant.Views {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(RegistrationPage));
-            NameEntry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::FarmingAssistant.CustomEntry>(this, "NameEntry");
-            SurnameEntry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::FarmingAssistant.CustomEntry>(this, "SurnameEntry");
-            LoginEntry2 = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::FarmingAssistant.CustomEntry>(this, "LoginEntry2");
-            PasswordEntry1 = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::FarmingAssistant.CustomEntry>(this, "PasswordEntry1");
-            PasswordEntry2 = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::FarmingAssistant.CustomEntry>(this, "PasswordEntry2");
+            NameEntry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::App1.CustomEntry>(this, "NameEntry");
+            SurnameEntry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::App1.CustomEntry>(this, "SurnameEntry");
+            LoginEntry2 = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::App1.CustomEntry>(this, "LoginEntry2");
+            PasswordEntry1 = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::App1.CustomEntry>(this, "PasswordEntry1");
+            PasswordEntry2 = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::App1.CustomEntry>(this, "PasswordEntry2");
             SignUpButton2 = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "SignUpButton2");
         }
     }

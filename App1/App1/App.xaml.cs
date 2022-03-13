@@ -1,11 +1,12 @@
-﻿using FarmingAssistant.Views;
+﻿using App1.Views;
+using App1.ViewModels;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using App.Services;
 using App.Models;
 
-namespace FarmingAssistant
+namespace App1
 {
     public partial class App : Application
     {

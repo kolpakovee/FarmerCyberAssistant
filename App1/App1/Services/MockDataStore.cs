@@ -52,7 +52,8 @@ namespace App.Services
             try
             {
                 string data = JsonSerializer.Serialize(_accounts);
-                File.WriteAllText(StaticSettings.AccountDataPath, data);
+                App1.App.Current.Properties.TryAdd("AccountData", data);
+                App1.App.Current.Properties["AccountData"] = data;
                 return await Task.FromResult(true);
             }
             catch { }
@@ -63,7 +64,7 @@ namespace App.Services
         {
             try
             {
-                string data = File.ReadAllText(StaticSettings.AccountDataPath);
+                string data = App1.App.Current.Properties["AccountData"].ToString();
                 var accounts = JsonSerializer.Deserialize<List<Account>>(data);
                 if (accounts.Count > 0)
                 {

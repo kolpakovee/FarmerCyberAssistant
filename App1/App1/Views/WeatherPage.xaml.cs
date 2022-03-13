@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace FarmingAssistant.Views
+namespace App1.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class WeatherPage : ContentPage

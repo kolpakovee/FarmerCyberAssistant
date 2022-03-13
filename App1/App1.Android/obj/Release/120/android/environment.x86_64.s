@@ -2,7 +2,7 @@
 	.section	.rodata.env.str.1,"aMS",@progbits,1
 	.type	.L.env.str.1, @object
 .L.env.str.1:
-	.asciz	"com.companyname.app1"
+	.asciz	"com.companyname.App1"
 	.size	.L.env.str.1, 21
 	.section	.data.application_config,"aw",@progbits
 	.type	application_config, @object
@@ -78,7 +78,7 @@ mono_aot_mode_name:
 	.section	.rodata.env.str.8,"aMS",@progbits,1
 	.type	.L.env.str.8, @object
 .L.env.str.8:
-	.asciz	"1d4df7ef-f646-4309-b67d-5303418064e5"
+	.asciz	"4e1d117b-b3c4-44d1-959d-7cf2d767bc28"
 	.size	.L.env.str.8, 37
 	.section	.rodata.env.str.9,"aMS",@progbits,1
 	.type	.L.env.str.9, @object

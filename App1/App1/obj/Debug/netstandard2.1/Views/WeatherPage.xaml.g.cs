@@ -8,9 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("App1.Views.WeatherPage.xaml", "Views/WeatherPage.xaml", typeof(global::FarmingAssistant.Views.WeatherPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("App1.Views.WeatherPage.xaml", "Views/WeatherPage.xaml", typeof(global::App1.Views.WeatherPage))]
 
-namespace FarmingAssistant.Views {
+namespace App1.Views {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\WeatherPage.xaml")]

@@ -8,9 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("App1.Views.FieldsPage.xaml", "Views/FieldsPage.xaml", typeof(global::FarmingAssistant.Views.FieldsPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("App1.Views.FieldsPage.xaml", "Views/FieldsPage.xaml", typeof(global::App1.Views.FieldsPage))]
 
-namespace FarmingAssistant.Views {
+namespace App1.Views {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\FieldsPage.xaml")]
@@ -20,10 +20,13 @@ namespace FarmingAssistant.Views {
         private global::Xamarin.Forms.Picker MainPicker;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::FarmingAssistant.CustomEntry FieldName;
+        private global::App1.CustomEntry FieldName;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Picker FieldsPicker;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.Maps.Map FieldMap;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Button AddFieldButton;
@@ -38,8 +41,9 @@ namespace FarmingAssistant.Views {
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(FieldsPage));
             MainPicker = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Picker>(this, "MainPicker");
-            FieldName = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::FarmingAssistant.CustomEntry>(this, "FieldName");
+            FieldName = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::App1.CustomEntry>(this, "FieldName");
             FieldsPicker = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Picker>(this, "FieldsPicker");
+            FieldMap = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Maps.Map>(this, "FieldMap");
             AddFieldButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "AddFieldButton");
             SaveFieldButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "SaveFieldButton");
             DeleteFieldButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "DeleteFieldButton");

@@ -8,9 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("App1.Views.LoginPage.xaml", "Views/LoginPage.xaml", typeof(global::FarmingAssistant.Views.LoginPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("App1.Views.LoginPage.xaml", "Views/LoginPage.xaml", typeof(global::App1.Views.LoginPage))]
 
-namespace FarmingAssistant.Views {
+namespace App1.Views {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\LoginPage.xaml")]
@@ -20,10 +20,10 @@ namespace FarmingAssistant.Views {
         private global::Xamarin.Forms.Image loginIcon;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::FarmingAssistant.CustomEntry LoginEntry;
+        private global::App1.CustomEntry LoginEntry;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::FarmingAssistant.CustomEntry PasswordEntry;
+        private global::App1.CustomEntry PasswordEntry;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Button SignInButton;
@@ -35,8 +35,8 @@ namespace FarmingAssistant.Views {
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(LoginPage));
             loginIcon = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Image>(this, "loginIcon");
-            LoginEntry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::FarmingAssistant.CustomEntry>(this, "LoginEntry");
-            PasswordEntry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::FarmingAssistant.CustomEntry>(this, "PasswordEntry");
+            LoginEntry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::App1.CustomEntry>(this, "LoginEntry");
+            PasswordEntry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::App1.CustomEntry>(this, "PasswordEntry");
             SignInButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "SignInButton");
             SignUpButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "SignUpButton");
         }

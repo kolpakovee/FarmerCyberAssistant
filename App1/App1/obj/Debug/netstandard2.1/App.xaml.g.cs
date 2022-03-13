@@ -8,9 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("App1.App.xaml", "App.xaml", typeof(global::FarmingAssistant.App))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("App1.App.xaml", "App.xaml", typeof(global::App1.App))]
 
-namespace FarmingAssistant {
+namespace App1 {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("App.xaml")]

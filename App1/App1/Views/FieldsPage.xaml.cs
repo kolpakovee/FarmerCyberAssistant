@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using FarmingAssistant.ViewModels;
+using App1.ViewModels;
+using Xamarin.Essentials;
+using Xamarin.Forms.Maps;
+using App.Models;
 
-namespace FarmingAssistant.Views
+namespace App1.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FieldsPage : ContentPage
@@ -16,6 +19,14 @@ namespace FarmingAssistant.Views
         public FieldsPage()
         {
             InitializeComponent();
+            FieldMap.MapClicked += (BindingContext as FieldsViewModel).OnMapChanged;
+            Task<Location> task = Geolocation.GetLastKnownLocationAsync();
+            Location location = task.Result;
+            Position position = new(location.Latitude, location.Longitude);
+            //Field field = (FieldsPicker.SelectedItem as Field);
+            //Position position = new(field.Latitude, field.Longitude);
+            FieldMap.MoveToRegion(MapSpan.FromCenterAndRadius(position, Distance.FromMeters(10000)));
+            FieldMap.Pins.Add(new Pin() { Label = "Position", Position = position });
         }
     }
 }

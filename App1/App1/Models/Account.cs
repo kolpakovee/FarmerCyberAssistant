@@ -142,7 +142,6 @@ namespace App.Models
                         _recommendationStore.AddRecommendations(loadFieldsList[n], newRecommendations[n]);
                     }
                 }
-                System.Diagnostics.Debug.WriteLine("RECCOMENDATIONS LOADED");
                 return getRecommendationsErrors;
             }
             return Array.Empty<string>();

@@ -5,8 +5,8 @@
        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
        mc:Ignorable="d"
        FlyoutBehavior="Disabled"
-       xmlns:local="clr-namespace:FarmingAssistant.Views"
-       x:Class="FarmingAssistant.AppShell">
+       xmlns:local="clr-namespace:App1.Views"
+       x:Class="App1.AppShell">
 
     <Shell.Resources>
         <ResourceDictionary>

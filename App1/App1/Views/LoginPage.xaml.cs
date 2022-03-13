@@ -1,14 +1,14 @@
-﻿using FarmingAssistant.Views;
+﻿using App1.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-using FarmingAssistant.ViewModels;
+using App1.ViewModels;
 using Xamarin.Forms.Xaml;
 
-namespace FarmingAssistant.Views
+namespace App1.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
@@ -16,7 +16,7 @@ namespace FarmingAssistant.Views
         public LoginPage()
         { 
             InitializeComponent();
-            loginIcon.Source = ImageSource.FromResource("FarmingAssistant.Icons.LoginIcon.png");
+            loginIcon.Source = ImageSource.FromResource("App1.Icons.LoginIcon.png");
             Appearing += (BindingContext as LoginViewModel).PageAppearing;
         }
     }

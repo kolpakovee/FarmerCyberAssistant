@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:vm="clr-namespace:FarmingAssistant.ViewModels"
-             xmlns:custom="clr-namespace:FarmingAssistant"
-             xmlns:converters="clr-namespace:FarmingAssistant.Converters"
+             xmlns:vm="clr-namespace:App1.ViewModels"
+             xmlns:custom="clr-namespace:App1"
+             xmlns:converters="clr-namespace:App1.Converters"
              xmlns:maps ="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              Shell.NavBarIsVisible="False"
-             x:Class="FarmingAssistant.Views.FieldsPage">
+             x:Class="App1.Views.FieldsPage">
 
     <ContentPage.BindingContext>
         <vm:FieldsViewModel/>
@@ -38,7 +38,7 @@
                             FontSize="17"
                             x:Name="MainPicker"
                             Opacity="0.7"
-                            ItemsSource= "{Binding CurrentAccount.CustomerInfo.Fields, Mode=TwoWay}"
+                            ItemsSource= "{Binding BindingFields, Mode=TwoWay}"
                             ItemDisplayBinding="{Binding Name}"
                             SelectedItem="{Binding SelectedField}"
                             HorizontalTextAlignment="Center"
@@ -100,7 +100,7 @@
                                                CornerRadius="40"
                                                HeightRequest="250"
                                                Padding="-2">
-                                    <maps:Map IsShowingUser="True"/>
+                                    <maps:Map x:Name="FieldMap" IsShowingUser="True" />
                                 </Frame>
                                 <Grid HorizontalOptions="CenterAndExpand" Padding="-2" Margin="0,10,0,0">
                                     <Grid.ColumnDefinitions>

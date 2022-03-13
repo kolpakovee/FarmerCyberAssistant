@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:custom="clr-namespace:FarmingAssistant"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:custom="clr-namespace:App1"
              Shell.NavBarIsVisible="False"
-             xmlns:vm="clr-namespace:FarmingAssistant.ViewModels"
-             x:Class="FarmingAssistant.Views.LoginPage" 
+             xmlns:vm="clr-namespace:App1.ViewModels"
+             x:Class="App1.Views.LoginPage" 
              BackgroundColor="White">
 
     <ContentPage.BindingContext>

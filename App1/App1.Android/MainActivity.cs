@@ -6,7 +6,7 @@ using Android.Runtime;
 using Android.OS;
 using Android;
 
-namespace FarmingAssistant.Droid
+namespace App1.Droid
 {
     [Activity(Label = "Farming Assistant", Icon = "@drawable/LoginIcon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize )]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity

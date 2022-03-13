@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
-using FarmingAssistant.Views;
+using App1.Views;
 using System.IO;
 using App.Services;
 using System.Threading.Tasks;
 using App.Models;
 
-namespace FarmingAssistant.ViewModels
+namespace App1.ViewModels
 {
     internal class LoginViewModel : BaseViewModel
     {
@@ -67,8 +67,6 @@ namespace FarmingAssistant.ViewModels
                 await Shell.Current.GoToAsync("//main");
             }
             IsBusy = false;
-            System.Diagnostics.Debug.WriteLine($"username> {_username}");
-            System.Diagnostics.Debug.WriteLine($"password> {_password}");
         }
 
         async Task SignUp()
@@ -78,7 +76,6 @@ namespace FarmingAssistant.ViewModels
 
         public async void PageAppearing(object sender, EventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine(App.Current.Properties["IsLoggedIn"]);
             if (App.Current.Properties["IsLoggedIn"] is true)
             {
                 await DataStore.LoadAsync();
