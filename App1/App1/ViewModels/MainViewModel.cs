@@ -43,14 +43,14 @@ namespace App1.ViewModels
         }
     }
 
-    public class DetailedField: BaseViewModel
+    public class DetailedField : BaseViewModel
     {
-        public  DetailedField(Field field)
+        public DetailedField(Field field)
         {
             FieldItem = field;
             var task = CurrentAccount.LoadRecommendations(FieldItem);
             System.Diagnostics.Debug.WriteLine("12345");
-            System.Diagnostics.Debug.WriteLine("Ошибки:" +  string.Join(' ', task));
+            System.Diagnostics.Debug.WriteLine("Ошибки:" + string.Join(' ', task));
             System.Diagnostics.Debug.WriteLine("12345");
         }
 
@@ -160,7 +160,7 @@ namespace App1.ViewModels
         public static List<DetailedField> GetDetailedField(List<Field> fields)
         {
             List<DetailedField> list = new();
-            
+
             foreach (Field field in fields)
                 list.Add(new DetailedField(field));
 

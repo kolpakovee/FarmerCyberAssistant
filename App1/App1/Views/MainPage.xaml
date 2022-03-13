@@ -6,7 +6,7 @@
              x:Class="App1.Views.MainPage">
 
     <ContentPage.BindingContext>
-        <vm:MainViewModel/>
+        <vm:FieldsViewModel/>
     </ContentPage.BindingContext>
 
     <ContentPage.Content>

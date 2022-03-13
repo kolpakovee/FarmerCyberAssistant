@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1.Android\\App1.Android.csproj": {}
+    "D:\\Development\\Xamarin\\FarmerCyberAssistant\\App1\\App1.Android\\App1.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1.Android\\App1.Android.csproj": {
+    "D:\\Development\\Xamarin\\FarmerCyberAssistant\\App1\\App1.Android\\App1.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1.Android\\App1.Android.csproj",
+        "projectUniqueName": "D:\\Development\\Xamarin\\FarmerCyberAssistant\\App1\\App1.Android\\App1.Android.csproj",
         "projectName": "App1.Android",
-        "projectPath": "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1.Android\\App1.Android.csproj",
-        "packagesPath": "C:\\Users\\Egor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1.Android\\obj\\",
+        "projectPath": "D:\\Development\\Xamarin\\FarmerCyberAssistant\\App1\\App1.Android\\App1.Android.csproj",
+        "packagesPath": "C:\\Users\\angel\\.nuget\\packages\\",
+        "outputPath": "D:\\Development\\Xamarin\\FarmerCyberAssistant\\App1\\App1.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Egor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\angel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +32,8 @@
         "frameworks": {
           "monoandroid12.0": {
             "projectReferences": {
-              "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1\\App1.csproj": {
-                "projectPath": "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1\\App1.csproj"
+              "D:\\Development\\Xamarin\\FarmerCyberAssistant\\App1\\App1\\App1.csproj": {
+                "projectPath": "D:\\Development\\Xamarin\\FarmerCyberAssistant\\App1\\App1\\App1.csproj"
               }
             }
           }
@@ -38,6 +42,10 @@
       "frameworks": {
         "monoandroid12.0": {
           "dependencies": {
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.11.4, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
@@ -62,17 +70,21 @@
         }
       }
     },
-    "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1\\App1.csproj": {
+    "D:\\Development\\Xamarin\\FarmerCyberAssistant\\App1\\App1\\App1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1\\App1.csproj",
+        "projectUniqueName": "D:\\Development\\Xamarin\\FarmerCyberAssistant\\App1\\App1\\App1.csproj",
         "projectName": "App1",
-        "projectPath": "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1\\App1.csproj",
-        "packagesPath": "C:\\Users\\Egor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Egor\\Desktop\\FCA\\App1\\App1\\obj\\",
+        "projectPath": "D:\\Development\\Xamarin\\FarmerCyberAssistant\\App1\\App1\\App1.csproj",
+        "packagesPath": "C:\\Users\\angel\\.nuget\\packages\\",
+        "outputPath": "D:\\Development\\Xamarin\\FarmerCyberAssistant\\App1\\App1\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Egor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\angel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -98,6 +110,10 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "dependencies": {
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.11.4, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
@@ -134,7 +150,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

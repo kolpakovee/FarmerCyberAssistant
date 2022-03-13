@@ -16,7 +16,6 @@ namespace App1.Views
         public FieldsPage()
         {
             InitializeComponent();
-            MainPicker.SelectedIndexChanged += (BindingContext as MainViewModel).ChangedSelectedIndex;
         }
     }
 }

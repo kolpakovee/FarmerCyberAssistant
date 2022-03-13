@@ -2858,3 +2858,12 @@ D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\stam
 D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\stamp\_GeneratePackageManagerJava.stamp
 D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\Egor\Desktop\FCA\App1\App1.Android\obj\Debug\120\res\drawable\seeds.png
+D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\res\drawable\seeds.png
+D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\android\assets\Mono.Cecil.dll
+D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\android\assets\Mono.Cecil.Mdb.dll
+D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\android\assets\Mono.Cecil.Mdb.pdb
+D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\android\assets\Mono.Cecil.pdb
+D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\android\assets\Mono.Cecil.Pdb.dll
+D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\android\assets\Mono.Cecil.Pdb.pdb
+D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\android\assets\Mono.Cecil.Rocks.dll
+D:\Development\Xamarin\FarmerCyberAssistant\App1\App1.Android\obj\Debug\120\android\assets\Mono.Cecil.Rocks.pdb

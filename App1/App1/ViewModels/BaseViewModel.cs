@@ -9,10 +9,12 @@ using Xamarin.Forms;
 namespace App1.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
-    {    
+    {
         public BaseViewModel()
         {
             CurrentAccount = new List<Account>(DataStore.GetItemsAsync().Result)[0];
+            //DetailedField.OnLoadRecommendations += CurrentAccount.LoadRecommendations;
+            //DetailedField.OnGetRecommendations += CurrentAccount.GetRecommendations;
         }
         public IDataStore<Account> DataStore { get; set; } = DependencyService.Get<IDataStore<Account>>();
 

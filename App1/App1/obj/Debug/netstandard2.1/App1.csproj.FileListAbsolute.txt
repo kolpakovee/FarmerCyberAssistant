@@ -71,7 +71,6 @@ D:\Development\Xamarin\FarmerCyberAssistant\App1\App1\bin\Debug\netstandard2.1\A
 D:\Development\Xamarin\FarmerCyberAssistant\App1\App1\bin\Debug\netstandard2.1\App1.dll
 D:\Development\Xamarin\FarmerCyberAssistant\App1\App1\bin\Debug\netstandard2.1\ref\App1.dll
 D:\Development\Xamarin\FarmerCyberAssistant\App1\App1\bin\Debug\netstandard2.1\App1.pdb
-D:\Development\Xamarin\FarmerCyberAssistant\App1\App1\obj\Debug\netstandard2.1\App1.csproj.AssemblyReference.cache
 D:\Development\Xamarin\FarmerCyberAssistant\App1\App1\obj\Debug\netstandard2.1\App1.GeneratedMSBuildEditorConfig.editorconfig
 D:\Development\Xamarin\FarmerCyberAssistant\App1\App1\obj\Debug\netstandard2.1\App.xaml.g.cs
 D:\Development\Xamarin\FarmerCyberAssistant\App1\App1\obj\Debug\netstandard2.1\AppShell.xaml.g.cs
@@ -90,3 +89,4 @@ D:\Development\Xamarin\FarmerCyberAssistant\App1\App1\obj\Debug\netstandard2.1\X
 D:\Development\Xamarin\FarmerCyberAssistant\App1\App1\obj\Debug\netstandard2.1\App1.dll
 D:\Development\Xamarin\FarmerCyberAssistant\App1\App1\obj\Debug\netstandard2.1\ref\App1.dll
 D:\Development\Xamarin\FarmerCyberAssistant\App1\App1\obj\Debug\netstandard2.1\App1.pdb
+D:\Development\Xamarin\FarmerCyberAssistant\App1\App1\obj\Debug\netstandard2.1\App1.csproj.AssemblyReference.cache

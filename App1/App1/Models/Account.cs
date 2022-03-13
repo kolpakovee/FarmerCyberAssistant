@@ -123,38 +123,22 @@ namespace App.Models
 
         public string[] LoadRecommendations(Field field)
         {
-            System.Diagnostics.Debug.WriteLine("444");
-            System.Diagnostics.Debug.WriteLine(_recommendations.Count);
-            System.Diagnostics.Debug.WriteLine("444");
-            System.Diagnostics.Debug.WriteLine(StaticSettings.ConfigVariables.FieldListLimitSize);
-            System.Diagnostics.Debug.WriteLine("444");
-
             if (_recommendations.Count > StaticSettings.ConfigVariables.FieldListLimitSize * 1.1) 
             {
-                System.Diagnostics.Debug.WriteLine("222");
                 _recommendations.Clear(); 
             }
 
-            System.Diagnostics.Debug.WriteLine("666");
             bool updateRequired = true;
-            System.Diagnostics.Debug.WriteLine(_recommendations.ContainsKey(new Field()));
-            System.Diagnostics.Debug.WriteLine("666");
-
-            System.Diagnostics.Debug.WriteLine(field);
-            System.Diagnostics.Debug.WriteLine("666");
 
             if (_recommendations.ContainsKey(field))
             {
-                System.Diagnostics.Debug.WriteLine("222");
                 if (_recommendations[field].Length > 0)
                 {
-                    System.Diagnostics.Debug.WriteLine("222");
                     updateRequired = false;
                     foreach (Recommendation recommendation in _recommendations[field])
                     {
                         if (!recommendation.IsRelevant)
                         {
-                            System.Diagnostics.Debug.WriteLine("222");
                             updateRequired = true;
                             break;
                         }
@@ -163,26 +147,20 @@ namespace App.Models
             }
             else
             {
-                System.Diagnostics.Debug.WriteLine("345");
                 _recommendations.Add(field, Array.Empty<Recommendation>());
             }
-            System.Diagnostics.Debug.WriteLine("222");
 
 
             if (updateRequired)
             {
-                System.Diagnostics.Debug.WriteLine("777");
                 string[] getRecommendationsErrors =
                     _requestSender.GetRecommendations(field, out Recommendation[] newRecommendations);
                 if (getRecommendationsErrors.Length == 0)
                 {
-                    System.Diagnostics.Debug.WriteLine("77777");
                     _recommendations[field] = newRecommendations;
                 }
-                System.Diagnostics.Debug.WriteLine("777");
                 return getRecommendationsErrors;
             }
-            System.Diagnostics.Debug.WriteLine("333");
             return Array.Empty<string>();
         }
     }

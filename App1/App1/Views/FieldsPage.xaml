@@ -38,6 +38,7 @@
                             SelectedItem="{Binding SelectedField}"
                             HorizontalTextAlignment="Center"
                             TitleColor="#C4C4C4"
+                            
                             Title="Выберите поле"/>
                 </Frame>
 
@@ -83,7 +84,7 @@
                                 </Frame>
 
                                 <Frame Padding="5" CornerRadius="20" HasShadow="False">
-                                    <Image Source="{Binding CultureIcon}"
+                                    <Image Source="{Binding SelectedField.PlantIcon}"
                                                    WidthRequest="30"/>
                                 </Frame>
 
