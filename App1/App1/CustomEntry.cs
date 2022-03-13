@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
 
-namespace App1
+namespace FarmingAssistant
 {
     public class CustomEntry : Entry
     {
@@ -15,9 +15,8 @@ namespace App1
             set => SetValue(BorderColorProperty, value);
         }
 
-
         public static readonly BindableProperty BorderWidthProperty =
-        BindableProperty.Create(nameof(BorderWidth), typeof(int), typeof(CustomEntry), Device.OnPlatform<int>(1, 2, 2));
+        BindableProperty.Create(nameof(BorderWidth), typeof(int), typeof(CustomEntry), Device.OnPlatform(1, 2, 2));
       
         public int BorderWidth
         {

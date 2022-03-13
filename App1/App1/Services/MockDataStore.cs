@@ -4,15 +4,12 @@ using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 using App.Models;
-using App1;
 
 namespace App.Services
 {
     public class MockDataStore : IDataStore<Account>
     {
         private readonly List<Account> _accounts;
-
-        public List<Account> Accounts => _accounts;
 
         public MockDataStore()
         {
@@ -54,14 +51,8 @@ namespace App.Services
         {
             try
             {
-                System.Diagnostics.Debug.WriteLine("Start!");
-                // TO DO: убрать дебаги
                 string data = JsonSerializer.Serialize(_accounts);
-                System.Diagnostics.Debug.WriteLine("NAME " + _accounts[0].Username);
-                App1.App.Current.Properties.TryAdd("AccountData", data);
-                App1.App.Current.Properties["AccountData"] = data;
-                System.Diagnostics.Debug.WriteLine("SAVED");
-                System.Diagnostics.Debug.WriteLine("HAS VAULE " + App1.App.Current.Properties["AccountData"]);
+                File.WriteAllText(StaticSettings.AccountDataPath, data);
                 return await Task.FromResult(true);
             }
             catch { }
@@ -71,11 +62,9 @@ namespace App.Services
         public async Task<bool> LoadAsync()
         {
             try
-            { 
-                System.Diagnostics.Debug.WriteLine("HAS VAULE " + App1.App.Current.Properties["AccountData"]);
-                string data = App1.App.Current.Properties["AccountData"].ToString();
+            {
+                string data = File.ReadAllText(StaticSettings.AccountDataPath);
                 var accounts = JsonSerializer.Deserialize<List<Account>>(data);
-                System.Diagnostics.Debug.WriteLine("LOADED " + accounts.Count + "!!!" + accounts[0].Username);
                 if (accounts.Count > 0)
                 {
                     _accounts.Clear();
@@ -85,10 +74,8 @@ namespace App.Services
                     }
                     return await Task.FromResult(true);
                 }
-                System.Diagnostics.Debug.WriteLine("END!");
             }
             catch { }
-            System.Diagnostics.Debug.WriteLine("ACCOUNT LOADED");
             return await Task.FromResult(false);
         }
     }

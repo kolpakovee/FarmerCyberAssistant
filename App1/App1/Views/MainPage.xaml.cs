@@ -1,4 +1,4 @@
-﻿using App1.Views;
+﻿using FarmingAssistant.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Shapes;
 using Xamarin.Forms.Xaml;
 
-namespace App1.Views
+namespace FarmingAssistant.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : ContentPage

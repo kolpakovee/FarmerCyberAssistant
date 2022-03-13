@@ -8,9 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("App1.Views.FieldsPage.xaml", "Views/FieldsPage.xaml", typeof(global::App1.Views.FieldsPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("App1.Views.FieldsPage.xaml", "Views/FieldsPage.xaml", typeof(global::FarmingAssistant.Views.FieldsPage))]
 
-namespace App1.Views {
+namespace FarmingAssistant.Views {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\FieldsPage.xaml")]
@@ -20,21 +20,29 @@ namespace App1.Views {
         private global::Xamarin.Forms.Picker MainPicker;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::App1.CustomEntry FieldName;
+        private global::FarmingAssistant.CustomEntry FieldName;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Picker picker;
+        private global::Xamarin.Forms.Picker FieldsPicker;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Button SignInButton;
+        private global::Xamarin.Forms.Button AddFieldButton;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.Button SaveFieldButton;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.Button DeleteFieldButton;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(FieldsPage));
             MainPicker = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Picker>(this, "MainPicker");
-            FieldName = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::App1.CustomEntry>(this, "FieldName");
-            picker = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Picker>(this, "picker");
-            SignInButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "SignInButton");
+            FieldName = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::FarmingAssistant.CustomEntry>(this, "FieldName");
+            FieldsPicker = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Picker>(this, "FieldsPicker");
+            AddFieldButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "AddFieldButton");
+            SaveFieldButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "SaveFieldButton");
+            DeleteFieldButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "DeleteFieldButton");
         }
     }
 }

@@ -1,5 +1,5 @@
-﻿using App1;
-using App1.iOS;
+﻿using FarmingAssistant;
+using FarmingAssistant.iOS;
 using CoreGraphics;
 using Foundation;
 using System;
@@ -11,7 +11,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
 [assembly: ExportRenderer(typeof(CustomEntry), typeof(CustomEntryRenderer))]
-namespace App1.iOS
+namespace FarmingAssistant.iOS
 {
     public class CustomEntryRenderer : EntryRenderer
     {

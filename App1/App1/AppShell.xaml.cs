@@ -1,10 +1,10 @@
 ﻿
-using App1.Views;
+using FarmingAssistant.Views;
 using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
 
-namespace App1
+namespace FarmingAssistant
 {
     public partial class AppShell : Xamarin.Forms.Shell
     {

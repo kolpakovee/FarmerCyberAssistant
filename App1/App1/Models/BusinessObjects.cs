@@ -15,7 +15,7 @@ namespace App.Models
         Wheat
     }
 
-    public enum RecommendationType
+    public enum RecommendationTypes
     {
         None,
         Fertilizing,
@@ -61,8 +61,6 @@ namespace App.Models
         {
             if (!FieldAddingIsPossible)
             {
-                Console.WriteLine(Fields);
-                Fields = null;
                 throw new InvalidOperationException("List size limit exceeded.");
             }
             if (field is null)
@@ -95,7 +93,7 @@ namespace App.Models
             {
                 if (value < -90 || 90 < value)
                 {
-                    throw new ArgumentException($"{nameof(value)} is out of valid interval.");
+                    throw new ArgumentException($"{nameof(value)} is out of valid interval."); 
                 }
                 _latitude = value;
             }
@@ -158,21 +156,21 @@ namespace App.Models
     public class Recommendation : IRecommendation
     {
         [JsonIgnore]
-        public RecommendationType Type { get; init; }
+        public RecommendationTypes Type { get; init; }
         public string TypeName
         {
-            get => Enum.GetName(typeof(RecommendationType), Type);
+            get => Enum.GetName(typeof(RecommendationTypes), Type);
             init
             {
-                foreach (RecommendationType type in Enum.GetValues(typeof(RecommendationType)))
+                foreach (RecommendationTypes type in Enum.GetValues(typeof(RecommendationTypes)))
                 {
-                    if (Enum.GetName(typeof(RecommendationType), type) == value)
+                    if (Enum.GetName(typeof(RecommendationTypes), type) == value)
                     {
                         Type = type;
                         return;
                     }
                 }
-                Type = RecommendationType.None;
+                Type = RecommendationTypes.None;
             }
         }
         public string Value { get; init; }
@@ -180,132 +178,4 @@ namespace App.Models
 
         public bool IsRelevant => ((DateTimeOffset)DateTime.Now).ToUnixTimeSeconds() <= RelevanceLimitTimestamp;
     }
-
-    /*
-    public class DetailedField : App1.ViewModels.BaseViewModel
-    {
-        public DetailedField(Field field)
-        {
-            FieldItem = field;
-            CurrentAccount.LoadRecommendations(FieldItem);
-            //OnLoadRecommendations?.Invoke(FieldItem);
-        }
-
-        public Dictionary<RecommendationType, string> Recommendations = new()
-        {
-            [RecommendationType.Watering] = "wateringCan.png",
-            [RecommendationType.Fertilizing] = "plant.png",
-            [RecommendationType.Harvest] = "shovel.png",
-            [RecommendationType.None] = "ok.png"
-        };
-
-        private Dictionary<Plants, string> PlantImages = new()
-        {
-            [Plants.Carrot] = "carrot.png",
-            [Plants.Potato] = "potatoes.png",
-            [Plants.Wheat] = "grass.png",
-            [Plants.None] = "unknown.png"
-        };
-
-        public Field FieldItem { get; init; }
-
-        public static event Func<Field, string[]> OnLoadRecommendations;
-        public static event Func<Field, Recommendation[]> OnGetRecommendations;
-
-        private Recommendation[] recommendations
-        {
-            //get => OnGetRecommendations?.Invoke(FieldItem);
-            get => CurrentAccount.GetRecommendations(FieldItem);
-        }
-
-        private Recommendation[] recommendations =
-        {
-            new Recommendation(){Type = RecommendationType.Watering, Value = "Полей поле, ну пожалуйста"}, 
-            //new Recommendation(){Type = RecommendationType.Fertilizing},
-            new Recommendation(){Type = RecommendationType.Harvest, Value = "Копай, пока не поздно..."},
-        };
-
-    public string FirstRecommendation
-    {
-        get
-        {
-            System.Diagnostics.Debug.WriteLine("Кол-во рекомендаций: " + recommendations.Length);
-            if (recommendations.Length == 0)
-                return "Можно отдохнуть сегодня!";
-
-            return recommendations[0].Value;
-        }
-    }
-
-    public string FirstRecommendationIcon
-    {
-        get
-        {
-            if (recommendations.Length == 0)
-                return Recommendations[RecommendationType.None];
-
-            return Recommendations[recommendations[0].Type];
-        }
-    }
-
-    public string SecondRecommendation
-    {
-        get
-        {
-            if (recommendations.Length <= 1)
-                return "Можно отдохнуть сегодня!";
-
-            return recommendations[1].Value;
-        }
-    }
-
-    public string SecondRecommendationIcon
-    {
-        get
-        {
-            if (recommendations.Length <= 1)
-                return Recommendations[RecommendationType.None];
-
-            return Recommendations[recommendations[1].Type];
-        }
-    }
-
-    public string ThirdRecommendation
-    {
-        get
-        {
-            if (recommendations.Length <= 2)
-                return "Можно отдохнуть сегодня!";
-
-            return recommendations[2].Value;
-        }
-    }
-
-
-    public string ThirdRecommendationIcon
-    {
-        get
-        {
-            if (recommendations.Length <= 2)
-                return Recommendations[RecommendationType.None];
-
-            return Recommendations[recommendations[2].Type];
-        }
-    }
-
-    public string PlantIcon
-    {
-        get => PlantImages[FieldItem.Plant];
-    }
-
-    public static List<DetailedField> GetDetailedField(List<Field> fields)
-    {
-        List<DetailedField> list = new();
-
-        foreach (Field field in fields)
-            list.Add(new DetailedField(field));
-
-        return list;
-    }
-    */
 }

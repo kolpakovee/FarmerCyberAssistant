@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
-using App1.Views;
+using FarmingAssistant.Views;
 using App.Models;
 
-namespace App1.ViewModels
+namespace FarmingAssistant.ViewModels
 {
     internal class SettingsViewModel : BaseViewModel
     {
@@ -17,7 +17,7 @@ namespace App1.ViewModels
         public ICommand ExitCommand { get; }
 
         //private List<string> _emails = new() { "advasileva_2@edu.hse.ru", "eekolpakov@edu.hse.ru", "asbityugov@edu.hse.ru", "fafirsov@edu.hse.ru" };
-        private List<string> _emails = new() { "Alenadvasileva@yandex.ru" };
+        private readonly List<string> _emails = new() { "Alenadvasileva@yandex.ru" };
 
         public SettingsViewModel()
         {

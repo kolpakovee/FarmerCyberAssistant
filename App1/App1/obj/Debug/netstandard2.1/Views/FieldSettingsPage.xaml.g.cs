@@ -8,9 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("App1.Views.FieldSettingsPage.xaml", "Views/FieldSettingsPage.xaml", typeof(global::App1.Views.FieldSettingsPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("App1.Views.FieldSettingsPage.xaml", "Views/FieldSettingsPage.xaml", typeof(global::FarmingAssistant.Views.FieldSettingsPage))]
 
-namespace App1.Views {
+namespace FarmingAssistant.Views {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\FieldSettingsPage.xaml")]

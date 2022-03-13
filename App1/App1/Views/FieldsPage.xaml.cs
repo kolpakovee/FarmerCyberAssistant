@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using App1.ViewModels;
+using FarmingAssistant.ViewModels;
 
-namespace App1.Views
+namespace FarmingAssistant.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FieldsPage : ContentPage

@@ -3,8 +3,8 @@
 	.section	.rodata.env.str.1,"aMS",@progbits,1
 	.type	.L.env.str.1, @object
 .L.env.str.1:
-	.asciz	"com.companyname.app1"
-	.size	.L.env.str.1, 21
+	.asciz	"com.companyname.FarmingAssistant"
+	.size	.L.env.str.1, 33
 	.section	.data.application_config,"aw",@progbits
 	.type	application_config, @object
 	.p2align	3
@@ -79,7 +79,7 @@ mono_aot_mode_name:
 	.section	.rodata.env.str.8,"aMS",@progbits,1
 	.type	.L.env.str.8, @object
 .L.env.str.8:
-	.asciz	"7913a86d-e5db-47d5-b275-1271be822cd6"
+	.asciz	"a290d113-a10e-4828-b378-8404e39d88b7"
 	.size	.L.env.str.8, 37
 	.section	.rodata.env.str.9,"aMS",@progbits,1
 	.type	.L.env.str.9, @object

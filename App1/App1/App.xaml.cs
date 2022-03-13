@@ -1,11 +1,11 @@
-﻿using App1.Views;
+﻿using FarmingAssistant.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using App.Services;
 using App.Models;
 
-namespace App1
+namespace FarmingAssistant
 {
     public partial class App : Application
     {
@@ -13,7 +13,7 @@ namespace App1
         {
             InitializeComponent();
             DependencyService.Register<MockDataStore>();
-            DependencyService.Get<MockDataStore>().LoadAsync();
+            DependencyService.Get<MockDataStore>().LoadAsync().Wait();
             MainPage = new AppShell();
         }
 

@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
-using App1.Views;
+using FarmingAssistant.Views;
 using System.IO;
 using App.Services;
 using System.Threading.Tasks;
 using App.Models;
 
-namespace App1.ViewModels
+namespace FarmingAssistant.ViewModels
 {
     internal class RegistrationViewModel : BaseViewModel
     {

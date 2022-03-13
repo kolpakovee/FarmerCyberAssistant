@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using App1.Views;
+using FarmingAssistant.Views;
 using App.Models;
 
-namespace App1.ViewModels
+namespace FarmingAssistant.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {

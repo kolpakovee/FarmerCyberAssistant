@@ -6,22 +6,37 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Xamarin.Forms;
 
-namespace App1.ViewModels
+namespace FarmingAssistant.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
         public BaseViewModel()
         {
+            System.Diagnostics.Debug.WriteLine("CREATED BASE MODEL");
             CurrentAccount = new List<Account>(DataStore.GetItemsAsync().Result)[0];
-            //DetailedField.OnLoadRecommendations += CurrentAccount.LoadRecommendations;
-            //DetailedField.OnGetRecommendations += CurrentAccount.GetRecommendations;
+            DetailedField.OnLoadRecommendations += CurrentAccount.LoadRecommendations;
+            DetailedField.OnGetRecommendations += CurrentAccount.GetRecommendations;
             CurrentAccount.CustomerInfo.OnFieldsChanged += () => OnPropertyChanged(nameof(Fields));
             CurrentAccount.OnCustomerInfoChanged += () => OnPropertyChanged(nameof(Fields));
-
         }
         public IDataStore<Account> DataStore { get; set; } = DependencyService.Get<IDataStore<Account>>();
 
         public Account CurrentAccount { get; set; }
+
+        protected List<DetailedField> fields;
+        public List<DetailedField> Fields
+        {
+            get
+            {
+                if (fields == null)
+                    fields = DetailedField.GetDetailedField(CurrentAccount.CustomerInfo.Fields);
+                return fields;
+            }
+            set
+            {
+                OnPropertyChanged(nameof(Fields));
+            }
+        }
 
         bool isBusy = false;
         public bool IsBusy
@@ -61,37 +76,27 @@ namespace App1.ViewModels
             changed.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
-
-        private List<DetailedField> fields;
-        public List<DetailedField> Fields
-        {
-            get
-            {
-                if (fields == null)
-                    fields = DetailedField.GetDetailedField(CurrentAccount.CustomerInfo.Fields);
-                return fields;
-            }
-        }
     }
 
-    public class DetailedField : BaseViewModel
+    public class DetailedField
     {
         public DetailedField(Field field)
         {
             FieldItem = field;
-            var task = CurrentAccount.LoadRecommendations(FieldItem);
+            //CurrentAccount.LoadRecommendations(FieldItem);
+            OnLoadRecommendations.Invoke(FieldItem);
             System.Diagnostics.Debug.WriteLine("CREATED DETAILED FIELD");
         }
 
-        public Dictionary<RecommendationType, string> Recommendations = new()
+        public Dictionary<RecommendationTypes, string> Recommendations = new()
         {
-            [RecommendationType.Watering] = "wateringCan.png",
-            [RecommendationType.Fertilizing] = "plant.png",
-            [RecommendationType.Harvest] = "shovel.png",
-            [RecommendationType.None] = "ok.png"
+            [RecommendationTypes.Watering] = "wateringCan.png",
+            [RecommendationTypes.Fertilizing] = "plant.png",
+            [RecommendationTypes.Harvest] = "shovel.png",
+            [RecommendationTypes.None] = "ok.png"
         };
 
-        private Dictionary<Plants, string> PlantImages = new()
+        private readonly Dictionary<Plants, string> PlantImages = new()
         {
             [Plants.Carrot] = "carrot.png",
             [Plants.Potato] = "potatoes.png",
@@ -101,29 +106,25 @@ namespace App1.ViewModels
             [Plants.None] = "default.png"
         };
 
+        public static event Func<Field, string[]> OnLoadRecommendations;
+        public static event Func<Field, Recommendation[]> OnGetRecommendations;
+
         public Field FieldItem { get; init; }
 
-        private Recommendation[] recommendations
+        private Recommendation[] ActualRecommendations
         {
-            get => CurrentAccount.GetRecommendations(FieldItem);
+            get => OnGetRecommendations.Invoke(FieldItem);
         }
-
-        /*private Recommendation[] recommendations =
-        {
-            new Recommendation(){Type = RecommendationType.Watering, Value = "Полей поле, ну пожалуйста"}, 
-            //new Recommendation(){Type = RecommendationType.Fertilizing},
-            new Recommendation(){Type = RecommendationType.Harvest, Value = "Копай, пока не поздно..."},
-        };*/
 
         public string FirstRecommendation
         {
             get
             {
-                System.Diagnostics.Debug.WriteLine("Кол-во рекомендаций: " + recommendations.Length);
-                if (recommendations.Length == 0)
+                System.Diagnostics.Debug.WriteLine("Кол-во рекомендаций: " + ActualRecommendations.Length);
+                if (ActualRecommendations.Length == 0)
                     return "Можно отдохнуть сегодня!";
 
-                return recommendations[0].Value;
+                return ActualRecommendations[0].Value;
             }
         }
 
@@ -131,10 +132,10 @@ namespace App1.ViewModels
         {
             get
             {
-                if (recommendations.Length == 0)
-                    return Recommendations[RecommendationType.None];
+                if (ActualRecommendations.Length == 0)
+                    return Recommendations[RecommendationTypes.None];
 
-                return Recommendations[recommendations[0].Type];
+                return Recommendations[ActualRecommendations[0].Type];
             }
         }
 
@@ -142,10 +143,10 @@ namespace App1.ViewModels
         {
             get
             {
-                if (recommendations.Length <= 1)
+                if (ActualRecommendations.Length <= 1)
                     return "Можно отдохнуть сегодня!";
 
-                return recommendations[1].Value;
+                return ActualRecommendations[1].Value;
             }
         }
 
@@ -153,10 +154,10 @@ namespace App1.ViewModels
         {
             get
             {
-                if (recommendations.Length <= 1)
-                    return Recommendations[RecommendationType.None];
+                if (ActualRecommendations.Length <= 1)
+                    return Recommendations[RecommendationTypes.None];
 
-                return Recommendations[recommendations[1].Type];
+                return Recommendations[ActualRecommendations[1].Type];
             }
         }
 
@@ -164,10 +165,10 @@ namespace App1.ViewModels
         {
             get
             {
-                if (recommendations.Length <= 2)
+                if (ActualRecommendations.Length <= 2)
                     return "Можно отдохнуть сегодня!";
 
-                return recommendations[2].Value;
+                return ActualRecommendations[2].Value;
             }
         }
 
@@ -176,10 +177,10 @@ namespace App1.ViewModels
         {
             get
             {
-                if (recommendations.Length <= 2)
-                    return Recommendations[RecommendationType.None];
+                if (ActualRecommendations.Length <= 2)
+                    return Recommendations[RecommendationTypes.None];
 
-                return Recommendations[recommendations[2].Type];
+                return Recommendations[ActualRecommendations[2].Type];
             }
         }
 

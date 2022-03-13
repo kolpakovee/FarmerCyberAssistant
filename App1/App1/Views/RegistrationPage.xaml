@@ -1,8 +1,8 @@
 ﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:custom="clr-namespace:App1"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:custom="clr-namespace:FarmingAssistant"
              Shell.NavBarIsVisible="False"
-             xmlns:vm="clr-namespace:App1.ViewModels"
-             x:Class="App1.Views.RegistrationPage" BackgroundColor="White">
+             xmlns:vm="clr-namespace:FarmingAssistant.ViewModels"
+             x:Class="FarmingAssistant.Views.RegistrationPage" BackgroundColor="White">
 
     <ContentPage.BindingContext>
         <vm:RegistrationViewModel/>
@@ -64,7 +64,7 @@
                 
                 <custom:CustomEntry x:Name="LoginEntry2" 
                                     Grid.Column="1" Grid.Row="7" 
-                                    Placeholder="Email или телефон" 
+                                    Placeholder="Логин" 
                                     PlaceholderColor="#C4C4C4" 
                                     CornerRadius ="25" 
                                     FontSize="16" 

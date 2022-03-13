@@ -6,8 +6,8 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
-using App1;
-using App1.Droid;
+using FarmingAssistant;
+using FarmingAssistant.Droid;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +16,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
 [assembly: ExportRenderer(typeof(CustomEntry), typeof(CustomEntryRenderer))]
-namespace App1.Droid
+namespace FarmingAssistant.Droid
 {
     public class CustomEntryRenderer : EntryRenderer
     {

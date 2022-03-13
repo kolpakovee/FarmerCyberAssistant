@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace App1.ViewModels
+namespace FarmingAssistant.ViewModels
 {
     internal class FieldSettingsViewModel : BaseViewModel
     {
