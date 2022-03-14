@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using System.Text;
 using App1.Views;
 using App.Models;
+using System.Windows.Input;
+using Xamarin.Forms;
+using System.Threading.Tasks;
 
 namespace App1.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
+        public ICommand LoadRecommendationsCommand { get; }
+
         public MainViewModel()
         {
+            LoadRecommendationsCommand = new Command(async () => await LoadRecommendations(), () => !IsBusy);
             DetailedField.OnLoadRecommendations += CurrentAccount.LoadRecommendations;
             DetailedField.OnGetRecommendations += CurrentAccount.GetRecommendations;
             CurrentAccount.CustomerInfo.OnFieldsChanged += () => OnPropertyChanged(nameof(Fields));
@@ -29,6 +35,13 @@ namespace App1.ViewModels
             {
                 OnPropertyChanged(nameof(Fields));
             }
+        }
+
+        private async Task LoadRecommendations()
+        {
+            fields = DetailedField.GetDetailedField(CurrentAccount.CustomerInfo.Fields);
+            System.Diagnostics.Debug.WriteLine("Loaded " + fields[0].FieldItem.Name);
+            OnPropertyChanged(nameof(Fields));
         }
 
         public class DetailedField

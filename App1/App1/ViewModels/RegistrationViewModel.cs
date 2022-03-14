@@ -57,7 +57,10 @@ namespace App1.ViewModels
         {
             IsBusy = true;
             string[] errors = await CurrentAccount.SignUpAsync(Username, Password);
-            if (errors.Length > 0) { System.Diagnostics.Debug.WriteLine(string.Join(' ', errors)); }
+            if (errors.Length > 0) { 
+                System.Diagnostics.Debug.WriteLine(string.Join(' ', errors));
+                App.Current.MainPage.DisplayAlert("Error", String.Join(' ', errors), "Ok");
+            }
             else
             {
                 App.Current.Properties["IsLoggedIn"] = true;

@@ -20,13 +20,17 @@ namespace App1.Views
         {
             InitializeComponent();
             FieldMap.MapClicked += (BindingContext as FieldsViewModel).OnMapChanged;
-            Task<Location> task = Geolocation.GetLastKnownLocationAsync();
-            Location location = task.Result;
-            Position position = new(location.Latitude, location.Longitude);
-            //Field field = (FieldsPicker.SelectedItem as Field);
-            //Position position = new(field.Latitude, field.Longitude);
-            FieldMap.MoveToRegion(MapSpan.FromCenterAndRadius(position, Distance.FromMeters(10000)));
-            FieldMap.Pins.Add(new Pin() { Label = "Position", Position = position });
+            try
+            {
+                Task<Location> task = Geolocation.GetLastKnownLocationAsync();
+                Location location = task.Result;
+                Position position = new(location.Latitude, location.Longitude);
+                //Field field = (FieldsPicker.SelectedItem as Field);
+                //Position position = new(field.Latitude, field.Longitude);
+                FieldMap.MoveToRegion(MapSpan.FromCenterAndRadius(position, Distance.FromMeters(10000)));
+                FieldMap.Pins.Add(new Pin() { Label = "Position", Position = position });
+            } 
+            catch { }
         }
     }
 }

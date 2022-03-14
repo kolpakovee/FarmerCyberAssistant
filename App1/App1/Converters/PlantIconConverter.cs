@@ -28,5 +28,4 @@ namespace App1.Converters
             [Plants.None] = "default.png"
         };
     }
-
 }

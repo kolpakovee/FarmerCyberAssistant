@@ -4,6 +4,7 @@
              xmlns:vm="clr-namespace:App1.ViewModels"
              xmlns:custom="clr-namespace:App1"
              xmlns:converters="clr-namespace:App1.Converters"
+             xmlns:models="clr-namespace:App.Models"
              xmlns:maps ="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              Shell.NavBarIsVisible="False"
              x:Class="App1.Views.FieldsPage">
@@ -14,10 +15,11 @@
 
     <ContentPage.Resources>
         <converters:PlantIconConverter x:Key="plantIconConverter"/>
+        <converters:PlantsEnumConverter x:Key="plantEnumConverter"/>
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <ScrollView BackgroundColor="White">
+        <ScrollView BackgroundColor="White" IsEnabled="False">
             <StackLayout Spacing="20">
 
                 <Label Text="Поля" 
@@ -48,10 +50,10 @@
                 </Frame>
 
                 <StackLayout>
-                    <Frame BackgroundColor="#F5F5FF" 
+                    <Frame BackgroundColor="{StaticResource LightBlue}" 
                                            BorderColor="#F0F0F0" 
                                            CornerRadius="40"
-                                           Padding="-10" Margin="0,0,0,0" 
+                                           Padding="-15" Margin="10,0,10,0" 
                                            HasShadow="False">
                         <StackLayout>
                             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" 
@@ -63,37 +65,38 @@
                                                     CornerRadius ="25" 
                                                     FontSize="21"   
                                                     BorderColor="#F5F5FF"
-                                                    Margin="0"
+                                                    Margin="10, 0, 0, 0"
                                                     HorizontalTextAlignment="Center"
                                                     BackgroundColor="#F5F5FF" 
                                                     IsCurvedCornersEnabled="True"/>
 
                             </StackLayout>
-
-                            <StackLayout Orientation="Horizontal" Margin="0,0,0,10">
-
-                                <Frame Margin="30,0"
-                                       Grid.Row="1"                                                   
+                            <Grid HorizontalOptions="Center" Margin="0,-10,30,10" Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1"></ColumnDefinition>
+                                    <ColumnDefinition Width="5*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Frame Margin="30,0,10,0"                                               
                                        Padding="20,0"
                                        HasShadow="False"
-                                       CornerRadius="25">
-
+                                       CornerRadius="25"
+                                       Grid.Column="1">
                                     <Picker TextColor="Black" 
                                             FontSize="15"
                                             x:Name="FieldsPicker"
                                             Opacity="0.7"
-                                            ItemsSource="{Binding Fields_name}"
+                                            ItemsSource="{Binding BindingPlants}"
+                                            SelectedItem="{Binding SelectedField.Plant}"
                                             HorizontalTextAlignment="Start"
                                             TitleColor="#C4C4C4"
                                             Title="Выберите культуру"/>
                                 </Frame>
-
-                                <Frame VerticalOptions="End" Padding="5" CornerRadius="20" HasShadow="False">
+                                <Frame Grid.Column="2"                                           
+                                        CornerRadius="30" HasShadow="False" Margin="5, 0, 0, 0">
                                     <Image Source="{Binding SelectedField.Plant, Converter={StaticResource plantIconConverter}}"
-                                                   WidthRequest="30"/>
+                                                   WidthRequest="10" Scale="3"/>
                                 </Frame>
-
-                            </StackLayout>
+                            </Grid>
 
                             <StackLayout  Margin="30, 0, 30, 30">
                                 <Frame BackgroundColor="Blue"
@@ -113,7 +116,7 @@
                                                        HorizontalOptions="Fill"
                                                        TextColor="White"
                                                         Command="{Binding CreateFieldCommand}"
-                                                       BackgroundColor="#4C52E7" 
+                                                       BackgroundColor="{StaticResource MediumBlue}" 
                                                        FontSize="12" 
                                                        FontAttributes="Bold" 
                                                        CornerRadius="25"/>
@@ -122,7 +125,7 @@
                                                        HorizontalOptions="Fill"
                                                        TextColor="White"
                                                         Command="{Binding UpdateFieldCommand}"
-                                                       BackgroundColor="#4C52E7" 
+                                                       BackgroundColor="{StaticResource MediumBlue}" 
                                                        FontSize="12" 
                                                        FontAttributes="Bold" 
                                                        CornerRadius="25"/>
@@ -131,7 +134,7 @@
                                                        HorizontalOptions="Fill"
                                                        TextColor="White"
                                                        Command="{Binding DeleteFieldCommand}"
-                                                       BackgroundColor="#4C52E7" 
+                                                       BackgroundColor="{StaticResource MediumBlue}" 
                                                        FontSize="12" 
                                                        FontAttributes="Bold" 
                                                        CornerRadius="25"/>

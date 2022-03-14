@@ -101,7 +101,7 @@
                 <Button x:Name="SignUpButton2" 
                         Text="Зарегистрироваться" 
                         TextColor="White" 
-                        BackgroundColor="#4C52E7"
+                        BackgroundColor="{StaticResource BrightBlue}"
                         CornerRadius="25" 
                         Grid.Column="1" Grid.Row="13" 
                         Command="{Binding SignUpCommand2}"

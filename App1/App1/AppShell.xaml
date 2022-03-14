@@ -14,7 +14,7 @@
                 <Setter Property="Shell.BackgroundColor" Value="#F7F7F7"/>
                 <Setter Property="Shell.DisabledColor" Value = "Black"/>
                 <Setter Property="Shell.ForegroundColor" Value="Black"/>
-                <Setter Property="Shell.TitleColor" Value="#4C52E7"/>
+                <Setter Property="Shell.TitleColor" Value="{StaticResource BrightBlue}"/>
             </Style>
             <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
             <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />

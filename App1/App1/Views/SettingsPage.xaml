@@ -21,7 +21,7 @@
                    HasShadow="False"
                    CornerRadius="15"
                    Padding="10,5,0,5"
-                   BackgroundColor="#4C52E7">
+                   BackgroundColor="{StaticResource BrightBlue}">
                 <StackLayout Orientation="Horizontal" Spacing="20">
                     <Image Source="User.png" WidthRequest="50"/>
                     <Label Text="{Binding CurrentAccount.Username}"

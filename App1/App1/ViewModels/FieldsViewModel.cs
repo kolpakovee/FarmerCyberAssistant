@@ -55,6 +55,15 @@ namespace App1.ViewModels
             }
         }
 
+        public ObservableCollection<Plants> BindingPlants
+        {
+            get => new(Enum.GetValues(typeof(Plants)).Cast<Plants>());
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+
         private async Task CreateField()
         {
             IsBusy = true;
@@ -64,7 +73,7 @@ namespace App1.ViewModels
             {
                 Plant = Plants.None,
                 Name = "Новое поле",
-                PlantingDate = 13032022,
+                PlantingDate = DateTime.Now.Ticks,
                 Longitude = location.Longitude,
                 Latitude = location.Latitude,
             });

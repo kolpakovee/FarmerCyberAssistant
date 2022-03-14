@@ -8,40 +8,40 @@ package com.google.android.gms.maps;
 
 public final class R {
 	public static final class attr {
-		public static final int ambientEnabled = 0x7f030035;
-		public static final int cameraBearing = 0x7f030088;
-		public static final int cameraMaxZoomPreference = 0x7f030089;
-		public static final int cameraMinZoomPreference = 0x7f03008a;
-		public static final int cameraTargetLat = 0x7f03008b;
-		public static final int cameraTargetLng = 0x7f03008c;
-		public static final int cameraTilt = 0x7f03008d;
-		public static final int cameraZoom = 0x7f03008e;
-		public static final int latLngBoundsNorthEastLatitude = 0x7f030211;
-		public static final int latLngBoundsNorthEastLongitude = 0x7f030212;
-		public static final int latLngBoundsSouthWestLatitude = 0x7f030213;
-		public static final int latLngBoundsSouthWestLongitude = 0x7f030214;
-		public static final int liteMode = 0x7f030273;
-		public static final int mapType = 0x7f030276;
-		public static final int uiCompass = 0x7f030420;
-		public static final int uiMapToolbar = 0x7f030421;
-		public static final int uiRotateGestures = 0x7f030422;
-		public static final int uiScrollGestures = 0x7f030423;
-		public static final int uiScrollGesturesDuringRotateOrZoom = 0x7f030424;
-		public static final int uiTiltGestures = 0x7f030425;
-		public static final int uiZoomControls = 0x7f030426;
-		public static final int uiZoomGestures = 0x7f030427;
-		public static final int useViewLifecycle = 0x7f03042e;
-		public static final int zOrderOnTop = 0x7f03044d;
+		public static final int ambientEnabled = 0x7f030040;
+		public static final int cameraBearing = 0x7f030093;
+		public static final int cameraMaxZoomPreference = 0x7f030094;
+		public static final int cameraMinZoomPreference = 0x7f030095;
+		public static final int cameraTargetLat = 0x7f030096;
+		public static final int cameraTargetLng = 0x7f030097;
+		public static final int cameraTilt = 0x7f030098;
+		public static final int cameraZoom = 0x7f030099;
+		public static final int latLngBoundsNorthEastLatitude = 0x7f03021d;
+		public static final int latLngBoundsNorthEastLongitude = 0x7f03021e;
+		public static final int latLngBoundsSouthWestLatitude = 0x7f03021f;
+		public static final int latLngBoundsSouthWestLongitude = 0x7f030220;
+		public static final int liteMode = 0x7f03027f;
+		public static final int mapType = 0x7f030282;
+		public static final int uiCompass = 0x7f03042c;
+		public static final int uiMapToolbar = 0x7f03042d;
+		public static final int uiRotateGestures = 0x7f03042e;
+		public static final int uiScrollGestures = 0x7f03042f;
+		public static final int uiScrollGesturesDuringRotateOrZoom = 0x7f030430;
+		public static final int uiTiltGestures = 0x7f030431;
+		public static final int uiZoomControls = 0x7f030432;
+		public static final int uiZoomGestures = 0x7f030433;
+		public static final int useViewLifecycle = 0x7f03043a;
+		public static final int zOrderOnTop = 0x7f030459;
 	}
 	public static final class id {
 		public static final int hybrid = 0x7f0800db;
-		public static final int none = 0x7f080141;
-		public static final int normal = 0x7f080142;
-		public static final int satellite = 0x7f080167;
-		public static final int terrain = 0x7f0801bb;
+		public static final int none = 0x7f080144;
+		public static final int normal = 0x7f080145;
+		public static final int satellite = 0x7f08016a;
+		public static final int terrain = 0x7f0801be;
 	}
 	public static final class styleable {
-		public static final int[] MapAttrs = new int[] { 0x7f030035, 0x7f030088, 0x7f030089, 0x7f03008a, 0x7f03008b, 0x7f03008c, 0x7f03008d, 0x7f03008e, 0x7f030211, 0x7f030212, 0x7f030213, 0x7f030214, 0x7f030273, 0x7f030276, 0x7f030420, 0x7f030421, 0x7f030422, 0x7f030423, 0x7f030424, 0x7f030425, 0x7f030426, 0x7f030427, 0x7f03042e, 0x7f03044d };
+		public static final int[] MapAttrs = new int[] { 0x7f030040, 0x7f030093, 0x7f030094, 0x7f030095, 0x7f030096, 0x7f030097, 0x7f030098, 0x7f030099, 0x7f03021d, 0x7f03021e, 0x7f03021f, 0x7f030220, 0x7f03027f, 0x7f030282, 0x7f03042c, 0x7f03042d, 0x7f03042e, 0x7f03042f, 0x7f030430, 0x7f030431, 0x7f030432, 0x7f030433, 0x7f03043a, 0x7f030459 };
 		public static final int MapAttrs_ambientEnabled = 0;
 		public static final int MapAttrs_cameraBearing = 1;
 		public static final int MapAttrs_cameraMaxZoomPreference = 2;

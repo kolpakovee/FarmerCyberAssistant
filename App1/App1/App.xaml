@@ -8,6 +8,9 @@
     <Application.Resources>
         <ResourceDictionary>
             <Color x:Key="PageColor">#E5E5E5</Color>
+            <Color x:Key="BrightBlue">#4C52E7</Color>
+            <Color x:Key="MediumBlue">#B1B4FF</Color>
+            <Color x:Key="LightBlue">#F5F5FF</Color>
             <Style TargetType="Label">
                 <Setter Property="FontFamily" Value="SF-Pro-Text-Bold.otf#SF-Pro-Text-Bold"/>
             </Style>
